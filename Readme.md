@@ -1,6 +1,7 @@
 # Data Structures & Algorithms in JavaScript - AlgoCamp
 
-[![AlgoCamp Logo](https://courses.algocamp.io/static/media/logo.5f5d3d63.svg)](https://imgproxy.learnyst.com/learnyst-user-assets/school-assets/schools/150122/courses/147867/17225227692231722516087202_lyst1722522769230.jpg)
+![image](https://github.com/user-attachments/assets/3d2c58a5-1e2e-47e0-83b9-08fee74dafe6)
+
 
 A comprehensive course covering fundamental data structures and algorithms implemented in JavaScript.
 
