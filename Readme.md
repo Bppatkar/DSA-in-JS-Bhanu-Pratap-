@@ -2,10 +2,10 @@
 
 ![image](https://github.com/user-attachments/assets/3d2c58a5-1e2e-47e0-83b9-08fee74dafe6)
 
-
 A comprehensive course covering fundamental data structures and algorithms implemented in JavaScript.
 
 ## Course Overview
+
 - **Language**: JavaScript
 - **Level**: Beginner to Intermediate
 - **Focus**: Practical implementation of DSA concepts
@@ -14,6 +14,7 @@ A comprehensive course covering fundamental data structures and algorithms imple
 ## Curriculum
 
 ### 1. Introduction
+
 - Course structure
 - JavaScript basics review
 - Big O notation
@@ -22,12 +23,13 @@ A comprehensive course covering fundamental data structures and algorithms imple
 ### 2. Data Structures
 
 #### Linear Structures
+
 - **Arrays**
   - Operations (access, insert, delete)
   - Static vs Dynamic arrays
   - Common patterns
-  
 - **Linked Lists**
+
   - Singly/Doubly linked
   - Implementation
   - Common operations
@@ -38,17 +40,21 @@ A comprehensive course covering fundamental data structures and algorithms imple
   - Use cases
 
 #### Non-Linear Structures
+
 - **Hash Tables**
+
   - Hash functions
   - Collision handling
   - Applications
 
 - **Trees**
+
   - Binary trees
   - BST implementation
   - Tree traversals (in-order, pre-order, post-order)
 
 - **Heaps**
+
   - Min/Max heap
   - Priority queues
   - Heap sort
@@ -61,6 +67,7 @@ A comprehensive course covering fundamental data structures and algorithms imple
 ### 3. Algorithms
 
 #### Sorting
+
 - Bubble sort
 - Selection sort
 - Insertion sort
@@ -69,21 +76,25 @@ A comprehensive course covering fundamental data structures and algorithms imple
 - Heap sort
 
 #### Searching
+
 - Linear search
 - Binary search
 - BFS/DFS
 
 #### Recursion
+
 - Principles
 - Call stack
 - Common patterns
 
 #### Dynamic Programming
+
 - Memoization
 - Tabulation
 - Classic problems
 
 ### 4. Problem Solving
+
 - Common patterns:
   - Two pointers
   - Sliding window
@@ -92,12 +103,18 @@ A comprehensive course covering fundamental data structures and algorithms imple
 - Technical interview prep
 
 ## Course Features
+
 - Interactive coding exercises
 - Real-world examples
 - Interview question bank
 - Progress tracking
 
 ## Prerequisites
+
 - Basic JavaScript knowledge
 - Familiarity with programming concepts
 
+## Created by
+
+- **Name**: Bhanu Pratap Patkar
+- **LinkedIn**: https://www.linkedin.com/in/bhanu-pratap-patkar
