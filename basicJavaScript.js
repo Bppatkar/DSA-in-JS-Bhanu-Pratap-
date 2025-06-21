@@ -187,6 +187,23 @@ switch (day) {
 let isAdult = (user.age >= 18) ? 'Adult' : 'Minor'; // condition ? valueIfTrue : valueIfFalse
 console.log(`User status: ${isAdult}`);
 
+// --- Short-Circuiting in Logical Operators ---
+// Logical AND (&&): If the left operand is falsy, the right operand is NOT evaluated. It returns the left operand.
+// If the left operand is truthy, it evaluates and returns the right operand.
+let resultAND = true && 'Hello'; // resultAND will be 'Hello'
+console.log('Logical AND short-circuit (true && "Hello"):', resultAND);
+resultAND = false && 'World'; // resultAND will be false, 'World' is not evaluated
+console.log('Logical AND short-circuit (false && "World"):', resultAND);
+
+// Logical OR (||): If the left operand is truthy, the right operand is NOT evaluated. It returns the left operand.
+// If the left operand is falsy, it evaluates and returns the right operand.
+let resultOR = true || 'Goodbye'; // resultOR will be true, 'Goodbye' is not evaluated
+console.log('Logical OR short-circuit (true || "Goodbye"):', resultOR);
+resultOR = false || 'See ya'; // resultOR will be 'See ya'
+console.log('Logical OR short-circuit (false || "See ya"):', resultOR);
+
+// Useful for providing default values: const name = inputName || 'Anonymous';
+
 /**
  * SECTION: 4. Loops
  * @description Illustrates various looping constructs in JavaScript for repeatedly executing code blocks.
@@ -234,6 +251,28 @@ for (const key in car) {
   }
 }
 // Consider using Object.keys(), Object.values(), or Object.entries() for objects when possible.
+
+// --- Loop Control: break and continue ---
+// `break`: Immediately exits the current loop (for, while, do-while, switch).
+console.log('\nBreak example:');
+for (let i = 0; i < 10; i++) {
+  if (i === 5) {
+    console.log('Breaking the loop at i = 5');
+    break; // Exit the for loop
+  }
+  console.log(`Loop iteration: ${i}`);
+} // Loop stops after printing "Loop iteration: 4"
+
+// `continue`: Skips the rest of the current loop iteration and continues with the next iteration.
+console.log('\nContinue example:');
+for (let i = 0; i < 5; i++) {
+  if (i === 2) {
+    console.log('Skipping iteration at i = 2');
+    continue; // Skip the rest of this iteration (the console.log below)
+  }
+  console.log(`Loop iteration: ${i}`);
+} // Prints 0, 1, skips 2, prints 3, 4
+
 
 /**
  * SECTION: 5. Functions
