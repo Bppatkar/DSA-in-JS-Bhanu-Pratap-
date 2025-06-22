@@ -1,0 +1,14 @@
+1_ title346334116
+2_7345252234
+3_comparision&conditional
+4_comparision&conditionalP2
+5_looping
+6_loopingP2
+7_function
+8_functionP2
+9_functionP3
+10_intermediateFunction
+11_intermediateFunctionP2
+12_numberSystem
+13_numberSystemP2    
+60_Number_Diamond_Pattern_23  ✅
