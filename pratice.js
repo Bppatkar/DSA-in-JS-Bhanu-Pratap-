@@ -22,8 +22,7 @@ console.log(newStr); */
 
 //? print the following pattern
 
-/* 
-function patternPrint(n) {
+/* function patternPrint1(n) {
   for (let i = 1; i <= n; i++) {
     let str = '';
     for (let j = 1; j <= i; j++) {
@@ -33,13 +32,11 @@ function patternPrint(n) {
   }
 }
 
-patternPrint(5);
-patternPrint(3); 
-*/
+patternPrint1(5); */
 
 //* print the following pattern
 
-/* function patternPrint(n) {
+/* function patternPrint2(n) {
   for (let i = 1; i <= n; i++) {
     let str = '';
     let spaces = n - i;
@@ -54,18 +51,19 @@ patternPrint(3);
   }
 }
 
-patternPrint(5); */
+
+patternPrint2(5); */
 
 //? print the following pattern
-/* function patternPrint(n) {
+function patternPrint3(n) {
   for (let i = 1; i <= n; i++) {
     let str = '';
-    let spaces = n - i;
-    for (let j = 1; j <= spaces; j++) {
+    // spaces
+    for (let j = 1; j <= n - i; j++) {
       str += ' ';
     }
-    let stars = 2 * i - 1;
-    for (let k = 0; k < stars; k++) {
+    // stars
+    for (let k = 1; k <= 2 * i - 1; k++) {
       str += '*';
     }
 
@@ -73,7 +71,7 @@ patternPrint(5); */
   }
 }
 
-patternPrint(6); */
+patternPrint3(5);
 
 //* print the following pattern
 
@@ -87,10 +85,9 @@ patternPrint(6); */
   }
 }
 
-patternPrint(6);
- */
+patternPrint(6); */
 
-/* function patternPrint(n) {
+/* function patternPrint4(n) {
   for (let i = 0; i <= n; i++) {
     let str = '';
     for (let j = 0; j <= i; j++) {
@@ -99,5 +96,39 @@ patternPrint(6);
     console.log(str);
   }
 }
-patternPrint(6);
- */
+patternPrint4(6); */
+
+//? print the following pattern
+
+/* function patternPrint5(n) {
+  // upper part of the pattern
+  for (let i = 1; i <= n; i++) {
+    let str = '';
+    // spaces
+    for (let j = 1; j <= n - i; j++) {
+      str += ' ';
+    }
+    // stars
+    for (let k = 1; k <= 2 * i - 1; k++) {
+      str += '*';
+    }
+
+    console.log(str);
+  }
+  // lower part of the pattern
+  for (let i = n - 1; i >= 1; i--) {
+    let str = '';
+    // spaces
+    for (let j = 1; j <= n - i; j++) {
+      str += ' ';
+    }
+    // stars
+    for (let k = 1; k <= 2 * i - 1; k++) {
+      str += '*';
+    }
+
+    console.log(str);
+  }
+}
+
+patternPrint5(5); */
