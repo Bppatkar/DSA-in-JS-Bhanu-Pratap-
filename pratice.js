@@ -55,7 +55,7 @@ patternPrint1(5); */
 patternPrint2(5); */
 
 //? print the following pattern
-function patternPrint3(n) {
+/* function patternPrint3(n) {
   for (let i = 1; i <= n; i++) {
     let str = '';
     // spaces
@@ -71,7 +71,7 @@ function patternPrint3(n) {
   }
 }
 
-patternPrint3(5);
+patternPrint3(5); */
 
 //* print the following pattern
 
@@ -132,3 +132,22 @@ patternPrint4(6); */
 }
 
 patternPrint5(5); */
+
+//* print the following pattern
+function patternPrint6(n) {
+  for (let i = 1; i <= n; i++) {
+    let str = '';
+    for (let j = 1; j <= i; j++) {
+      str += '*';
+    }
+    console.log(str);
+  }
+  for (let i = n - 1; i >= 1; i--) {
+    let str = '';
+    for (let j = 1; j <= i; j++) {
+      str += '*';
+    }
+    console.log(str);
+  }
+}
+patternPrint6(5);
