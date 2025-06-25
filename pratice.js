@@ -137,17 +137,36 @@ patternPrint5(5); */
 function patternPrint6(n) {
   for (let i = 1; i <= n; i++) {
     let str = '';
+    // stars on the left
     for (let j = 1; j <= i; j++) {
+      str += '*';
+    }
+    // spaces in the middle
+    for (let k = 1; k <= 2 * (n - i); k++) {
+      str += ' ';
+    }
+    // stars on the right
+    for (let l = 1; l <= i; l++) {
       str += '*';
     }
     console.log(str);
   }
   for (let i = n - 1; i >= 1; i--) {
     let str = '';
+    // stars on the left
     for (let j = 1; j <= i; j++) {
+      str += '*';
+    }
+    // spaces in the middle
+    for (let k = 1; k <= 2 * (n - i); k++) {
+      str += ' ';
+    }
+    // stars on the right
+    for (let l = 1; l <= i; l++) {
       str += '*';
     }
     console.log(str);
   }
+  
 }
 patternPrint6(5);
