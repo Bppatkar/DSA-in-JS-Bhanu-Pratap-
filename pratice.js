@@ -286,7 +286,7 @@ console.log(arr); */
 occurenceChecker('Javascript'); */
 
 //* other way
-let str = 'Javascript';
+/* let str = 'Javascript';
 let count = {};
 for (let i = 0; i < str.length; i++) {
   if (count[str[i]]) {
@@ -297,4 +297,18 @@ for (let i = 0; i < str.length; i++) {
 }
 for (let char in count) {
   console.log(`${char}: ${count[char]}`);
+} */
+
+//! one more way with for-of loop
+/* let str = 'Javascript';
+let count = {};
+for (const char of str) {
+  if (count[char]) {
+    // if present update it
+    count[char] += 1;
+  } else {
+    // if not present add it
+    count[char] = 1;
+  }
 }
+console.log(count) */
