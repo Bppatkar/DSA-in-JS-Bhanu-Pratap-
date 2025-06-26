@@ -173,7 +173,7 @@ patternPrint6(5); */
 
 //! gcd and lcm
 
-function lcm(a, b) {
+/* function lcm(a, b) {
   for (let i = a > b ? a : b; i <= a * b; i++) {
     if (i % a == 0 && i % b == 0) {
       return i;
@@ -193,14 +193,54 @@ function gcf(a, b) {
 }
 
 let ans2 = gcf(105, 36);
-console.log(ans2);
+console.log(ans2); */
 
 //? Other method for GCD (greatest common divisor) id Euclidean algorithm [Euclid's algo]
 //! fastest method to calculate GCD
-function gcd(a, b) {
+/* function gcd(a, b) {
   if (b == 0) return a;
   return gcd(b, a % b);
 }
 
 let ans3 = gcd(105, 36);
 console.log(ans3);
+ */
+
+//! sum of digits of the number X
+
+/* function sumOfDigits(x) {
+  let sum = 0;
+  while (x > 0) {
+    sum += x % 10;
+    x = Math.floor(x / 10);
+  }
+  return sum;
+}
+
+let ans4 = sumOfDigits(123);
+console.log(ans4); */
+
+//* Fibonacci numbers
+//? print the first n fibonacci numbers
+
+/* function fibonacciNumbers(n) {
+  if (n == 0) {
+    console.log(0);
+    return;
+  }
+  for (let i = 2, a = -1, b = 1; i <= n; i++) {
+    if (n == 1) {
+      console.log(0);
+      console.log(1);
+      return;
+    }
+    let c = a + b;
+    console.log(c);
+    a = b;
+    b = c;
+  }
+}
+
+fibonacciNumbers(5); */
+
+
