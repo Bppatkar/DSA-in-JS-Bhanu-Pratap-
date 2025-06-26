@@ -10,5 +10,9 @@
 10_intermediateFunction
 11_intermediateFunctionP2
 12_numberSystem
-13_numberSystemP2    
+13_numberSystemP2   
+56_[leetcode]121. Best Time to Buy and Sell Stock 
+57_
+58_
+59_
 60_Number_Diamond_Pattern_23  ✅
