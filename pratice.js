@@ -134,7 +134,7 @@ patternPrint4(6); */
 patternPrint5(5); */
 
 //* print the following pattern
-function patternPrint6(n) {
+/* function patternPrint6(n) {
   for (let i = 1; i <= n; i++) {
     let str = '';
     // stars on the left
@@ -169,4 +169,38 @@ function patternPrint6(n) {
   }
   
 }
-patternPrint6(5);
+patternPrint6(5); */
+
+//! gcd and lcm
+
+function lcm(a, b) {
+  for (let i = a > b ? a : b; i <= a * b; i++) {
+    if (i % a == 0 && i % b == 0) {
+      return i;
+    }
+  }
+}
+
+let ans = lcm(12, 3);
+console.log(ans);
+
+function gcf(a, b) {
+  for (let i = a < b ? a : b; i >= 1; i--) {
+    if (a % i == 0 && b % i == 0) {
+      return i;
+    }
+  }
+}
+
+let ans2 = gcf(105, 36);
+console.log(ans2);
+
+//? Other method for GCD (greatest common divisor) id Euclidean algorithm [Euclid's algo]
+//! fastest method to calculate GCD
+function gcd(a, b) {
+  if (b == 0) return a;
+  return gcd(b, a % b);
+}
+
+let ans3 = gcd(105, 36);
+console.log(ans3);
