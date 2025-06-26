@@ -243,4 +243,58 @@ console.log(ans4); */
 
 fibonacciNumbers(5); */
 
+// console.log(new Array(5).fill(0).map((_, i) => i + 1));
 
+//! question - [1,0,0,1,1,1,0,1,0,0,1]
+// rearragne the data such that all 0's are at the start and all 1's are at the end
+// output should be- [0,0,0,0,0,1,1,1,1,1,1]
+
+//* condition is dont create new array and dont use any prebuilt method and you can traverse the array only once
+
+let arr = [1, 0, 0, 1, 1, 1, 0, 1, 0, 0, 1];
+
+/* function swap(arr, i, j) {
+  let temp = arr[i];
+  arr[i] = arr[j];
+  arr[j] = temp;
+}
+
+function seperate(arr) {
+  let i = 0;
+  let j = arr.length - 1;
+  while (i <= j) {
+    if (arr[i] === 1) {
+      swap(arr, i, j);
+      j--;
+    } else {
+      i++;
+    }
+  }
+}
+
+seperate(arr);
+console.log(arr); */
+
+//! given a string , try to print the no. of occurences of each character in the string
+//Ex. Javascript => j=1, a=2 and so on
+
+/* function occurenceChecker(str) {
+  str.split('').forEach((char) => {
+    console.log(`${char}:${str.split(char).length - 1}`);
+  });
+}
+occurenceChecker('Javascript'); */
+
+//* other way
+let str = 'Javascript';
+let count = {};
+for (let i = 0; i < str.length; i++) {
+  if (count[str[i]]) {
+    count[str[i]]++;
+  } else {
+    count[str[i]] = 1;
+  }
+}
+for (let char in count) {
+  console.log(`${char}: ${count[char]}`);
+}
