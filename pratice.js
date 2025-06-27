@@ -415,7 +415,7 @@ console.log("after modified the original one",arr)
 1 2 3 4 5 6 7
 */
 
-function diamondNumberPattern(n) {
+/* function diamondNumberPattern(n) {
   for (let i = 1; i <= n; i++) {
     let spaces = i - 1;
     let str = '';
@@ -445,3 +445,26 @@ function diamondNumberPattern(n) {
 }
 
 diamondNumberPattern(7);
+console.log('------------------');
+diamondNumberPattern(5); */
+
+//! leetcode - 485. Max Consecutive Ones 
+//? given a binary array
+
+var findMaxConsecutiveOnes = function (nums) {
+  let currCount = 0;
+  let finalCount = 0;
+  for (let i = 0; i < nums.length; i++) {
+    if (nums[i] == 1) {
+      currCount++;
+    } else {
+      currCount = 0;
+    }
+    finalCount = Math.max(currCount, finalCount);
+  }
+  return finalCount;
+};
+
+nums = [1, 0, 1, 1, 0, 1];
+// nums = [1, 1, 0, 1, 1, 1];
+console.log(findMaxConsecutiveOnes(nums));
