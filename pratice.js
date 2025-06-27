@@ -381,13 +381,13 @@ merge([1, 2, 3, 0, 0, 0], 3, [2, 5, 6], 3);
 //ex- [5,9,1,8,2,3] => [3,2,8,1,9,5]
 
 function reverseArr(arr) {
-  for (let i = 0; i < arr.length; i++) {
+  for (let i = 0, j = arr.length - 1; i < j; i++, j--) {
     let temp = arr[i];
-    arr[i] = arr[arr.length - i];
-    arr[arr.length - i] = temp;
+    arr[i] = arr[j];
+    arr[j] = temp;
   }
   return arr;
 }
 
-let result = reverseArr([5, 9, 1, 8, 2, 3]);
+let result = reverseArr([5, 9, 1, 8, 2, 3, 5, 2, 0]);
 console.log(result);
