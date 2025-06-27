@@ -314,3 +314,80 @@ for (const char of str) {
 console.log(count) */
 
 //! leetcode - 121. Best time to Buy and Sell the stock
+
+/* var maxProfit = function (prices) {
+  let currMin = prices[0];
+  let profit = 0;
+  for (let i = 0; i < prices.length; i++) {
+    // can i sell ?
+    if (prices[i] > currMin) {
+      // you can sell, but check is it better than prev profit ?
+      profit = Math.max(profit, prices[i] - currMin);
+    }
+    // can i Buy ?
+    if (prices[i] < currMin) {
+      currMin = prices[i];
+    }
+  }
+  return profit;
+};
+
+let ans = maxProfit((prices = [7, 1, 5, 3, 6, 4]));
+console.log(ans); */
+
+//! leetcode - 88. Merge Sorted Array
+
+/* var merge = function (nums1, m, nums2, n) {
+  let result = Array(m + n).fill(0);
+  let i = 0;
+  let j = 0;
+  let k = 0;
+
+  while (i < m && j < n) {
+    if (nums1[i] < nums2[j]) {
+      result[k] = nums1[i];
+      i++;
+      k++;
+    } else {
+      result[k] = nums2[j];
+      k++;
+      j++;
+    }
+  }
+
+  while (i < m) {
+    result[k] = nums1[i];
+    i++;
+    k++;
+  }
+  while (j < n) {
+    result[k] = nums2[j];
+    j++;
+    k++;
+  }
+
+  for (let i = 0; i < result.length; i++) {
+    nums1[i] = result[i];
+  }
+
+  console.log(nums1); // Add this line to print the result
+};
+
+merge([1, 2, 3, 0, 0, 0], 3, [2, 5, 6], 3);
+ */
+
+//* write a algorithm to reverse the same array.
+//? Note- You should not create a new array
+//ex- [5,9,1,8,2,3] => [3,2,8,1,9,5]
+
+function reverseArr(arr) {
+  for (let i = 0; i < arr.length; i++) {
+    let temp = arr[i];
+    arr[i] = arr[arr.length - i];
+    arr[arr.length - i] = temp;
+  }
+  return arr;
+}
+
+let result = reverseArr([5, 9, 1, 8, 2, 3]);
+console.log(result);
