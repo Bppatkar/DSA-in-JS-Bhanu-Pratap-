@@ -251,7 +251,7 @@ fibonacciNumbers(5); */
 
 //* condition is dont create new array and dont use any prebuilt method and you can traverse the array only once
 
-let arr = [1, 0, 0, 1, 1, 1, 0, 1, 0, 0, 1];
+// let arr = [1, 0, 0, 1, 1, 1, 0, 1, 0, 0, 1];
 
 /* function swap(arr, i, j) {
   let temp = arr[i];
@@ -380,6 +380,8 @@ merge([1, 2, 3, 0, 0, 0], 3, [2, 5, 6], 3);
 //? Note- You should not create a new array
 //ex- [5,9,1,8,2,3] => [3,2,8,1,9,5]
 
+/* let arr = [5,9,1,8,2,3];
+console.log("without modified original one", arr)
 function reverseArr(arr) {
   for (let i = 0, j = arr.length - 1; i < j; i++, j--) {
     let temp = arr[i];
@@ -389,5 +391,57 @@ function reverseArr(arr) {
   return arr;
 }
 
-let result = reverseArr([5, 9, 1, 8, 2, 3, 5, 2, 0]);
+let result = reverseArr(arr);
 console.log(result);
+console.log("after modified the original one",arr)
+
+ */
+
+//! Number_Diamond_Pattern_23
+// expected output - if n = 7 then
+/* 
+1 2 3 4 5 6 7
+ 2 3 4 5 6 7
+  3 4 5 6 7
+   4 5 6 7
+    5 6 7
+     6 7
+      7
+     6 7
+    5 6 7
+   4 5 6 7
+  3 4 5 6 7
+ 2 3 4 5 6 7
+1 2 3 4 5 6 7
+*/
+
+function diamondNumberPattern(n) {
+  for (let i = 1; i <= n; i++) {
+    let spaces = i - 1;
+    let str = '';
+    for (let j = 1; j <= spaces; j++) {
+      str += ' ';
+    }
+    let num = i;
+    while (num <= n) {
+      str += num + ' ';
+      num++;
+    }
+    console.log(str);
+  }
+  for (let i = 1; i <= n - 1; i++) {
+    let str = '';
+    let spaces = n - i - 1;
+    for (let j = 1; j <= spaces; j++) {
+      str += ' ';
+    }
+    let num = n - i;
+    while (num <= n) {
+      str += num + ' ';
+      num++;
+    }
+    console.log(str);
+  }
+}
+
+diamondNumberPattern(7);
