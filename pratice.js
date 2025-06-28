@@ -630,7 +630,7 @@ pattern9(5); */
 }
 pattern10(4); */
 
-function pattern11(n) {
+/* function pattern11(n) {
   let start = 1;
   for (let i = 0; i < n; i++) {
     if (i % 2 == 0) start = 1;
@@ -643,15 +643,58 @@ function pattern11(n) {
     console.log(str);
   }
 }
-pattern11(5);
-function pattern12(n) {}
-pattern12(5);
-function pattern13(n) {}
-pattern13(5);
-function pattern14(n) {}
-pattern14(5);
-function pattern15(n) {}
-pattern15(5);
+pattern11(5); */
+
+/* function pattern12(n) {
+  for (let i = 1; i <= n; i++) {
+    let str = '';
+    for (let j = 1; j <= i; j++) {
+      str += j;
+    }
+    for (let j = 1; j <= 2 * n - 2 * i; j++) {
+      str += ' ';
+    }
+    for (let j = i; j >= 1; j--) {
+      str += j;
+    }
+    console.log(str);
+  }
+}
+pattern12(4); */
+
+/* function pattern13(n) {
+  for (let i = 1, k = 1; i <= n; i++) {
+    let str = '';
+    for (let j = 1; j <= i; j++, k++) {
+      str += k + ' ';
+    }
+    console.log(str);
+  }
+}
+pattern13(5); */
+
+/* function pattern14(n) {
+  for (let i = 0; i < n; i++) {
+    let str = '';
+    for (let j = 0; j <= i; j++) {
+      str += String.fromCharCode(65 + j);
+    }
+    console.log(str);
+  }
+}
+pattern14(5); */
+
+/* function pattern15(n) {
+  for (let i = 0; i < n; i++) {
+    let str = '';
+    for (let j = 0; j < n - i; j++) {
+      str += String.fromCharCode(65 + j);
+    }
+    console.log(str);
+  }
+}
+pattern15(5); */
+
 function pattern16(n) {}
 pattern16(5);
 function pattern17(n) {}
