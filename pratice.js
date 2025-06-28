@@ -471,4 +471,96 @@ console.log(findMaxConsecutiveOnes(nums));
  */
 
 //! solving all pattern problem from strivers dsa sheet [https://takeuforward.org/strivers-a2z-dsa-course/must-do-pattern-problems-before-starting-dsa]
+
+//? Striver's DSA pattern Problems
+
+/* function pattern1(n) {
+  for (let i = 0; i < n; i++) {
+    let str = ' ';
+    for (let j = 0; j <= n; j++) {
+      str += '*';
+    }
+    console.log(str);
+  }
+}
+pattern1(3); */
+
+/* function pattern2(n) {
+  for (let i = 0; i < n; i++) {
+    let str = ' ';
+    for (let j = 0; j <= i; j++) {
+      str += '*';
+    }
+    console.log(str);
+  }
+}
+pattern2(5); */
+/* function pattern3(n) {
+  for (let i = 1; i < n; i++) {
+    let str = '';
+    for (let j = 1; j <= i; j++) {
+      str += j;
+    }
+    console.log(str);
+  }
+}
+pattern3(6); */
+
+/* function pattern4(n) {
+  for (let i = 1; i < n; i++) {
+    let str = '';
+    for (let j = 1; j <= i; j++) {
+      str += i;
+    }
+    console.log(str);
+  }
+}
+pattern4(6); */
+
+/* function pattern5(n) {
+  for (let i = 0; i < n; i++) {
+    let str = '';
+    for (let j = 0; j <= n - i - 1; j++) {
+      str += '*';
+    }
+    console.log(str);
+  }
+}
+pattern5(5); */
+
+function pattern6(n) {}
+pattern6(5);
+function pattern7(n) {}
+pattern7(5);
+function pattern8(n) {}
+pattern8(5);
+function pattern9(n) {}
+pattern9(5);
+function pattern10(n) {}
+pattern10(5);
+function pattern11(n) {}
+pattern11(5);
+function pattern12(n) {}
+pattern12(5);
+function pattern13(n) {}
+pattern13(5);
+function pattern14(n) {}
+pattern14(5);
+function pattern15(n) {}
+pattern15(5);
+function pattern16(n) {}
+pattern16(5);
+function pattern17(n) {}
+pattern17(5);
+function pattern18(n) {}
+pattern18(5);
+function pattern19(n) {}
+pattern19(5);
+function pattern20(n) {}
+pattern20(5);
+function pattern21(n) {}
+pattern21(5);
+function pattern22(n) {}
+pattern22(5);
+
 //! leetcode - 448. Find All Numbers Disappeared in an Array
