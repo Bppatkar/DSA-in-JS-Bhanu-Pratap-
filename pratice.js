@@ -26,7 +26,7 @@ console.log(newStr); */
   for (let i = 1; i <= n; i++) {
     let str = '';
     for (let j = 1; j <= i; j++) {
-      str += '*';
+      str += ★;
     }
     console.log(str);
   }
@@ -45,7 +45,7 @@ patternPrint1(5); */
     }
     let stars = i;
     for (let k = 0; k < stars; k++) {
-      str += '*';
+      str += ★;
     }
     console.log(str);
   }
@@ -64,7 +64,7 @@ patternPrint2(5); */
     }
     // stars
     for (let k = 1; k <= 2 * i - 1; k++) {
-      str += '*';
+      str += ★;
     }
 
     console.log(str);
@@ -79,7 +79,7 @@ patternPrint3(5); */
   for (let i = 0; i < n; i++) {
     let str = '';
     for (let j = n; j > i; j--) {
-      str += '*';
+      str += ★;
     }
     console.log(str);
   }
@@ -91,7 +91,7 @@ patternPrint(6); */
   for (let i = 0; i <= n; i++) {
     let str = '';
     for (let j = 0; j <= i; j++) {
-      str += '*';
+      str += ★;
     }
     console.log(str);
   }
@@ -110,7 +110,7 @@ patternPrint4(6); */
     }
     // stars
     for (let k = 1; k <= 2 * i - 1; k++) {
-      str += '*';
+      str += ★;
     }
 
     console.log(str);
@@ -124,7 +124,7 @@ patternPrint4(6); */
     }
     // stars
     for (let k = 1; k <= 2 * i - 1; k++) {
-      str += '*';
+      str += ★;
     }
 
     console.log(str);
@@ -139,7 +139,7 @@ patternPrint5(5); */
     let str = '';
     // stars on the left
     for (let j = 1; j <= i; j++) {
-      str += '*';
+      str += ★;
     }
     // spaces in the middle
     for (let k = 1; k <= 2 * (n - i); k++) {
@@ -147,7 +147,7 @@ patternPrint5(5); */
     }
     // stars on the right
     for (let l = 1; l <= i; l++) {
-      str += '*';
+      str += ★;
     }
     console.log(str);
   }
@@ -155,7 +155,7 @@ patternPrint5(5); */
     let str = '';
     // stars on the left
     for (let j = 1; j <= i; j++) {
-      str += '*';
+      str += ★;
     }
     // spaces in the middle
     for (let k = 1; k <= 2 * (n - i); k++) {
@@ -163,7 +163,7 @@ patternPrint5(5); */
     }
     // stars on the right
     for (let l = 1; l <= i; l++) {
-      str += '*';
+      str += ★;
     }
     console.log(str);
   }
@@ -478,7 +478,7 @@ console.log(findMaxConsecutiveOnes(nums));
   for (let i = 0; i < n; i++) {
     let str = ' ';
     for (let j = 0; j <= n; j++) {
-      str += '*';
+      str += ★;
     }
     console.log(str);
   }
@@ -489,12 +489,13 @@ pattern1(3); */
   for (let i = 0; i < n; i++) {
     let str = ' ';
     for (let j = 0; j <= i; j++) {
-      str += '*';
+      str += ★;
     }
     console.log(str);
   }
 }
 pattern2(5); */
+
 /* function pattern3(n) {
   for (let i = 1; i < n; i++) {
     let str = '';
@@ -521,7 +522,7 @@ pattern4(6); */
   for (let i = 0; i < n; i++) {
     let str = '';
     for (let j = 0; j <= n - i - 1; j++) {
-      str += '*';
+      str += ★;
     }
     console.log(str);
   }
@@ -548,7 +549,7 @@ pattern6(6); */
     }
     //star
     for (let j = 0; j < 2 * i + 1; j++) {
-      str += '*';
+      str += ★;
     }
     //space
     for (let j = 0; j < n - i - 1; j++) {
@@ -568,7 +569,7 @@ pattern7(5); */
     }
     //star
     for (let j = 0; j < 2 * n - (2 * i + 1); j++) {
-      str += '*';
+      str += ★;
     }
     //space
     for (let j = 0; j < i; j++) {
@@ -579,7 +580,7 @@ pattern7(5); */
 }
 pattern8(5); */
 
-function pattern9(n) {
+/* function pattern9(n) {
   // upper part
   for (let i = 0; i < n; i++) {
     let str = '';
@@ -589,7 +590,7 @@ function pattern9(n) {
     }
     //star
     for (let j = 0; j < 2 * i + 1; j++) {
-      str += '*';
+      str += ★;
     }
     //space
     for (let j = 0; j < n - i - 1; j++) {
@@ -606,7 +607,7 @@ function pattern9(n) {
     }
     //star
     for (let j = 0; j < 2 * n - (2 * i + 1); j++) {
-      str += '*';
+      str += ★;
     }
     //space
     for (let j = 0; j < i; j++) {
@@ -615,10 +616,33 @@ function pattern9(n) {
     console.log(str);
   }
 }
-pattern9(5);
-function pattern10(n) {}
-pattern10(5);
-function pattern11(n) {}
+pattern9(5); */
+
+/* function pattern10(n) {
+  for (let i = 0; i < 2 * n - 1; i++) {
+    let str = '';
+    const stars = i < n ? i + 1 : 2 * n - i - 1;
+    for (let j = 0; j < stars; j++) {
+      str += '★';
+    }
+    console.log(str);
+  }
+}
+pattern10(4); */
+
+function pattern11(n) {
+  let start = 1;
+  for (let i = 0; i < n; i++) {
+    if (i % 2 == 0) start = 1;
+    else start = 0;
+    let str = '';
+    for (let j = 0; j <= i; j++) {
+      str += start + ' ';
+      start = 1 - start;
+    }
+    console.log(str);
+  }
+}
 pattern11(5);
 function pattern12(n) {}
 pattern12(5);
