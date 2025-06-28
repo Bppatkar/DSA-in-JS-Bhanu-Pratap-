@@ -528,13 +528,93 @@ pattern4(6); */
 }
 pattern5(5); */
 
-function pattern6(n) {}
-pattern6(5);
-function pattern7(n) {}
-pattern7(5);
-function pattern8(n) {}
-pattern8(5);
-function pattern9(n) {}
+/* function pattern6(n) {
+  for (let i = 1; i < n; i++) {
+    let str = '';
+    for (let j = 1; j <= n - i; j++) {
+      str += j;
+    }
+    console.log(str);
+  }
+}
+pattern6(6); */
+
+/* function pattern7(n) {
+  for (let i = 0; i < n; i++) {
+    let str = '';
+    // space
+    for (let j = 0; j < n - i - 1; j++) {
+      str += ' ';
+    }
+    //star
+    for (let j = 0; j < 2 * i + 1; j++) {
+      str += '*';
+    }
+    //space
+    for (let j = 0; j < n - i - 1; j++) {
+      str += ' ';
+    }
+    console.log(str);
+  }
+}
+pattern7(5); */
+
+/* function pattern8(n) {
+  for (let i = 0; i < n; i++) {
+    let str = '';
+    // space
+    for (let j = 0; j < i; j++) {
+      str += ' ';
+    }
+    //star
+    for (let j = 0; j < 2 * n - (2 * i + 1); j++) {
+      str += '*';
+    }
+    //space
+    for (let j = 0; j < i; j++) {
+      str += ' ';
+    }
+    console.log(str);
+  }
+}
+pattern8(5); */
+
+function pattern9(n) {
+  // upper part
+  for (let i = 0; i < n; i++) {
+    let str = '';
+    // space
+    for (let j = 0; j < n - i - 1; j++) {
+      str += ' ';
+    }
+    //star
+    for (let j = 0; j < 2 * i + 1; j++) {
+      str += '*';
+    }
+    //space
+    for (let j = 0; j < n - i - 1; j++) {
+      str += ' ';
+    }
+    console.log(str);
+  }
+  // lower part
+  for (let i = 0; i < n; i++) {
+    let str = '';
+    // space
+    for (let j = 0; j < i; j++) {
+      str += ' ';
+    }
+    //star
+    for (let j = 0; j < 2 * n - (2 * i + 1); j++) {
+      str += '*';
+    }
+    //space
+    for (let j = 0; j < i; j++) {
+      str += ' ';
+    }
+    console.log(str);
+  }
+}
 pattern9(5);
 function pattern10(n) {}
 pattern10(5);
