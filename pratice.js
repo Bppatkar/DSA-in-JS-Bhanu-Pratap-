@@ -448,23 +448,27 @@ diamondNumberPattern(7);
 console.log('------------------');
 diamondNumberPattern(5); */
 
-//! leetcode - 485. Max Consecutive Ones 
+//! leetcode - 485. Max Consecutive Ones
 //? given a binary array
 
-var findMaxConsecutiveOnes = function (nums) {
+/* var findMaxConsecutiveOnes = function (nums) {
   let currCount = 0;
   let finalCount = 0;
   for (let i = 0; i < nums.length; i++) {
     if (nums[i] == 1) {
       currCount++;
     } else {
+      finalCount = Math.max(currCount, finalCount);
       currCount = 0;
     }
-    finalCount = Math.max(currCount, finalCount);
   }
-  return finalCount;
+  return Math.max(currCount, finalCount);
 };
 
 nums = [1, 0, 1, 1, 0, 1];
 // nums = [1, 1, 0, 1, 1, 1];
 console.log(findMaxConsecutiveOnes(nums));
+ */
+
+//! solving all pattern problem from strivers dsa sheet [https://takeuforward.org/strivers-a2z-dsa-course/must-do-pattern-problems-before-starting-dsa]
+//! leetcode - 448. Find All Numbers Disappeared in an Array
