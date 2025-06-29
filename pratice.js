@@ -484,6 +484,7 @@ console.log(findMaxConsecutiveOnes(nums));
   }
 }
 pattern1(3); */
+// console.log('-------------------------');
 
 /* function pattern2(n) {
   for (let i = 0; i < n; i++) {
@@ -495,6 +496,7 @@ pattern1(3); */
   }
 }
 pattern2(5); */
+// console.log('-------------------------');
 
 /* function pattern3(n) {
   for (let i = 1; i < n; i++) {
@@ -506,6 +508,7 @@ pattern2(5); */
   }
 }
 pattern3(6); */
+// console.log('-------------------------');
 
 /* function pattern4(n) {
   for (let i = 1; i < n; i++) {
@@ -517,6 +520,7 @@ pattern3(6); */
   }
 }
 pattern4(6); */
+// console.log('-------------------------');
 
 /* function pattern5(n) {
   for (let i = 0; i < n; i++) {
@@ -528,6 +532,7 @@ pattern4(6); */
   }
 }
 pattern5(5); */
+// console.log('-------------------------');
 
 /* function pattern6(n) {
   for (let i = 1; i < n; i++) {
@@ -539,6 +544,7 @@ pattern5(5); */
   }
 }
 pattern6(6); */
+// console.log('-------------------------');
 
 /* function pattern7(n) {
   for (let i = 0; i < n; i++) {
@@ -549,16 +555,17 @@ pattern6(6); */
     }
     //star
     for (let j = 0; j < 2 * i + 1; j++) {
-      str += ★;
+      str += '★';
     }
     //space
-    for (let j = 0; j < n - i - 1; j++) {
-      str += ' ';
-    }
+    // for (let j = 0; j < n - i - 1; j++) {
+    //   str += ' ';
+    // }
     console.log(str);
   }
 }
-pattern7(5); */
+pattern7(5);
+console.log('-------------------------'); */
 
 /* function pattern8(n) {
   for (let i = 0; i < n; i++) {
@@ -569,7 +576,7 @@ pattern7(5); */
     }
     //star
     for (let j = 0; j < 2 * n - (2 * i + 1); j++) {
-      str += ★;
+      str += '★';
     }
     //space
     for (let j = 0; j < i; j++) {
@@ -579,6 +586,7 @@ pattern7(5); */
   }
 }
 pattern8(5); */
+// console.log('-------------------------');
 
 /* function pattern9(n) {
   // upper part
@@ -590,7 +598,7 @@ pattern8(5); */
     }
     //star
     for (let j = 0; j < 2 * i + 1; j++) {
-      str += ★;
+      str += '★';
     }
     //space
     for (let j = 0; j < n - i - 1; j++) {
@@ -617,6 +625,7 @@ pattern8(5); */
   }
 }
 pattern9(5); */
+// console.log('-------------------------');
 
 /* function pattern10(n) {
   for (let i = 0; i < 2 * n - 1; i++) {
@@ -629,6 +638,7 @@ pattern9(5); */
   }
 }
 pattern10(4); */
+// console.log('-------------------------');
 
 /* function pattern11(n) {
   let start = 1;
@@ -644,6 +654,7 @@ pattern10(4); */
   }
 }
 pattern11(5); */
+// console.log('-------------------------');
 
 /* function pattern12(n) {
   for (let i = 1; i <= n; i++) {
@@ -661,6 +672,7 @@ pattern11(5); */
   }
 }
 pattern12(4); */
+// console.log('-------------------------');
 
 /* function pattern13(n) {
   for (let i = 1, k = 1; i <= n; i++) {
@@ -672,6 +684,7 @@ pattern12(4); */
   }
 }
 pattern13(5); */
+// console.log('-------------------------');
 
 /* function pattern14(n) {
   for (let i = 0; i < n; i++) {
@@ -683,6 +696,7 @@ pattern13(5); */
   }
 }
 pattern14(5); */
+// console.log('-------------------------');
 
 /* function pattern15(n) {
   for (let i = 0; i < n; i++) {
@@ -694,20 +708,73 @@ pattern14(5); */
   }
 }
 pattern15(5); */
+// console.log('-------------------------');
 
-function pattern16(n) {}
-pattern16(5);
-function pattern17(n) {}
-pattern17(5);
+/* function pattern16(n) {
+  for (let i = 0; i < n; i++) {
+    let str = '';
+    for (let j = 0; j <= i; j++) {
+      str += String.fromCharCode(65 + i);
+    }
+    console.log(str);
+  }
+}
+pattern16(5); */
+// console.log('-------------------------');
+
+function pattern17(n) {
+  for (let i = 0; i < n; i++) {
+    let str = '';
+    for (let j = 0; j < n - i - 1; j++) {
+      str += ' ';
+    }
+    let charCode = 65;
+    for (let j = 1; j <= 2 * i + 1; j++) {
+      str += String.fromCharCode(charCode);
+      charCode += j <= i ? 1 : -1;
+    }
+
+    console.log(str);
+  }
+}
+pattern17(4);
+// console.log('-------------------------');
+
 function pattern18(n) {}
 pattern18(5);
+// console.log('-------------------------');
+
 function pattern19(n) {}
 pattern19(5);
+// console.log('-------------------------');
+
 function pattern20(n) {}
 pattern20(5);
+// console.log('-------------------------');
+
 function pattern21(n) {}
 pattern21(5);
+// console.log('-------------------------');
+
 function pattern22(n) {}
 pattern22(5);
+// console.log('-------------------------');
 
 //! leetcode - 448. Find All Numbers Disappeared in an Array
+/* var findDisappearedNumbers = function (nums) {
+  for (let i = 0; i < nums.length; i++) {
+    let x = Math.abs(nums[i]);
+    let index = x - 1;
+    if (nums[index] > 0) {
+      nums[index] *= -1;
+    }
+  }
+  let resultArr = [];
+  for (let j = 0; j < nums.length; j++) {
+    if (nums[j] > 0) {
+      resultArr.push(j + 1);
+    }
+  }
+  return resultArr;
+};
+ */
