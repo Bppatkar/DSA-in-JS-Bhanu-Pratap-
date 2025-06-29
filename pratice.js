@@ -722,7 +722,7 @@ pattern15(5); */
 pattern16(5); */
 // console.log('-------------------------');
 
-function pattern17(n) {
+/* function pattern17(n) {
   for (let i = 0; i < n; i++) {
     let str = '';
     for (let j = 0; j < n - i - 1; j++) {
@@ -739,11 +739,19 @@ function pattern17(n) {
     console.log(str);
   }
 }
-pattern17(4);
+pattern17(4); */
 // console.log('-------------------------');
 
-function pattern18(n) {}
-pattern18(5);
+/* function pattern18(n) {
+  for (let i = 0; i < n; i++) {
+    let str = '';
+    for (let j = i; j >= 0; j--) {
+      str += String.fromCharCode(65 + n - j - 1);
+    }
+    console.log(str);
+  }
+}
+pattern18(5); */
 // console.log('-------------------------');
 
 function pattern19(n) {}
