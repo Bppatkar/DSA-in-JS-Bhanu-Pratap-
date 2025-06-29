@@ -754,20 +754,139 @@ pattern17(4); */
 pattern18(5); */
 // console.log('-------------------------');
 
-function pattern19(n) {}
-pattern19(5);
+/* function pattern19(n) {
+  let str = "";
+  let iniS = 0;
+  
+  // Upper part
+  for (let i = 0; i < n; i++) {
+    // stars
+    for (let j = 1; j <= n - i; j++) {
+      str += "*";
+    }
+    // spaces
+    for (let j = 0; j < iniS; j++) {
+      str += " ";
+    }
+    // stars
+    for (let j = 1; j <= n - i; j++) {
+      str += "*";
+    }
+    iniS += 2;
+    str += "\n";
+  }
+  
+  iniS = 2 * n - 2; // Reset space count for lower part
+  
+  // Lower part
+  for (let i = 1; i <= n; i++) {
+    // stars
+    for (let j = 1; j <= i; j++) {
+      str += "*";
+    }
+    // spaces
+    for (let j = 0; j < iniS; j++) {
+      str += " ";
+    }
+    // stars
+    for (let j = 1; j <= i; j++) {
+      str += "*";
+    }
+    iniS -= 2;
+    str += "\n";
+  }
+  
+  return str;
+}
+
+let ans = pattern19(5); // You can change this number
+console.log(ans); */
 // console.log('-------------------------');
 
-function pattern20(n) {}
-pattern20(5);
+/* function print20(n) {
+  let str = "";
+  let spaces = 2 * n - 2;
+  
+  for (let i = 1; i <= 2 * n - 1; i++) {
+    let stars = i;
+    if (i > n) stars = 2 * n - i;
+    
+    // Left stars
+    for (let j = 1; j <= stars; j++) {
+      str += "*";
+    }
+    
+    // Spaces
+    for (let j = 1; j <= spaces; j++) {
+      str += " ";
+    }
+    
+    // Right stars
+    for (let j = 1; j <= stars; j++) {
+      str += "*";
+    }
+    
+    str += "\n";
+    
+    // Update spaces for next iteration
+    if (i < n) {
+      spaces -= 2;
+    } else if (i >= n) {
+      spaces += 2;
+    }
+  }
+  
+  return str;
+}
+
+console.log(print20(5)); */
 // console.log('-------------------------');
 
-function pattern21(n) {}
-pattern21(5);
+/* function print21(n) {
+  let pattern = "";
+  for (let i = 0; i < n; i++) {
+    for (let j = 0; j < n; j++) {
+      if (i === 0 || j === 0 || i === n - 1 || j === n - 1) {
+        pattern += "*";
+      } else {
+        pattern += " "; 
+      }
+    }
+    pattern += "\n";
+  }
+  return pattern;
+}
+
+console.log(print21(5)); */
 // console.log('-------------------------');
 
-function pattern22(n) {}
-pattern22(5);
+/* function print22(n) {
+  let pattern = "";
+  const size = 2 * n - 1;
+  
+  for (let i = 0; i < size; i++) {
+    for (let j = 0; j < size; j++) {
+      const top = i;
+      const left = j;
+      const right = (2 * n - 2) - j;
+      const bottom = (2 * n - 2) - i;
+      
+      // Find the minimum distance to any border
+      const minDist = Math.min(
+        Math.min(top, bottom),
+        Math.min(left, right)
+      );
+      
+      // Calculate the number to print
+      pattern += (n - minDist);
+    }
+    pattern += "\n";
+  }
+  
+  return pattern;
+}
+
+console.log(print22(4)); */
 // console.log('-------------------------');
 
 //! leetcode - 448. Find All Numbers Disappeared in an Array
