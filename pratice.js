@@ -731,7 +731,9 @@ function pattern17(n) {
     let charCode = 65;
     for (let j = 1; j <= 2 * i + 1; j++) {
       str += String.fromCharCode(charCode);
-      charCode += j <= i ? 1 : -1;
+      // charCode += j <= i ? 1 : -1;
+      if (j <= i) charCode++;
+      else charCode--;
     }
 
     console.log(str);
