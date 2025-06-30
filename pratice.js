@@ -945,11 +945,17 @@ a b result
 0 1  1
 1 1  0
 }
-means result is 0 when two is equal.
+in XOR table - if we xor two same value the ans is zero 0, whereas xor of a value with 0, gives the same value.
+[4,1,2,1,3,2,3] so if we xor that values - 4 ^ 1 ^ 2 ^ 1 ^ 3 ^ 2 ^ 3 --> all same values becomes 0 means we get
+ 4 ^ 0 --> so in xor table  ," xor of a value with 0, gives the same value" so we got value 4 that is our ans.
 */
 
 var singleNumber = function (nums) {
-  for (let i = 0; i < nums.length; i++) {}
+  let result = 0;
+  for (let i = 0; i < nums.length; i++) {
+    result = result ^ nums[i];
+  }
+  return result;
 };
 
 // let nums = [2, 2, 1];
