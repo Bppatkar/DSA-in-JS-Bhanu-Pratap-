@@ -907,3 +907,51 @@ console.log(print22(4)); */
   return resultArr;
 };
  */
+
+//! leetcode - 167. Two Sum II - Input Array is Sorted
+/* var twoSum = function (numbers, target) {
+  let start = 0,
+  end = numbers.length - 1;
+  while (start < end) {
+    if (numbers[start] + numbers[end] === target) {
+      return [start + 1, end + 1];
+    } else if (arr[start] + arr[end] > target) {
+      end--;
+    } else {
+      start++;
+    }
+  }
+}; */
+
+//! leetcode 136. Single Number
+
+//? Approach 1: Freq Map
+/* 
+[4,1,2,1,3,2,3] 
+{
+  1: 2,
+  2: 2,
+  3: 2,
+  4: 1
+} 
+*/
+
+//? Approach 2: using operator [Bitwise XOR]
+/* 
+{
+a b result
+0 0  0
+1 0  1
+0 1  1
+1 1  0
+}
+means result is 0 when two is equal.
+*/
+
+var singleNumber = function (nums) {
+  for (let i = 0; i < nums.length; i++) {}
+};
+
+// let nums = [2, 2, 1];
+let nums = [4, 1, 2, 1, 2];
+console.log(singleNumber(nums));
