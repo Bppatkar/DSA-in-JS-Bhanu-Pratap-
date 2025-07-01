@@ -1077,7 +1077,7 @@ console.log(arr);
 
 //? Print all elements of this 2d grid row by row
 // expected o/p - 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16
-function display(grid) {
+/* function display(grid) {
   let str = '';
   for (let i = 0; i < grid.length; i++) {
     for (let j = 0; j < grid[i].length; j++) {
@@ -1094,4 +1094,141 @@ let grid = [
   [13, 14, 15, 16],
 ];
 
-display(grid);
+display(grid); */
+
+//* Given a 2D array, Print it in a Column wave form.
+
+// expected o/p -
+/* 
+ 1  2  3  4
+ 5  6  7  8
+ 9  10 11 12
+ 13 14 15 16
+ 17 18 19 20 
+
+ */
+//? Wave Print
+/* function displayWavePrint(grid, m, n) {
+  let str = '';
+  for (let col = 0; col < n; col++) {
+    for (let row = 0; row < m; row++) {
+      str += grid[row][col] + ' ';
+    }
+  }
+  console.log(str);
+}
+
+let grid = [
+  [1, 2, 3, 4],
+  [5, 6, 7, 8],
+  [9, 10, 11, 12],
+  [13, 14, 15, 16],
+  [17, 18, 19, 20],
+];
+displayWavePrint(grid, 5, 4); */
+
+//? if we want to print some cols from down to up we need to reverse the inner loop
+// using same upper wave print problem
+//* even cols - up to down
+//* odd cols - down to up
+
+/* function displayWavePrint(grid, m, n) {
+  let str = '';
+  for (let col = 0; col < n; col++) {
+    if (col % 2 == 0) {
+      // even cols - up to down
+      for (let row = 0; row < m; row++) {
+        str += grid[row][col] + ' ';
+      }
+    } else {
+      // odd cols - down to up
+      for (let row = m - 1; row >= 0; row--) {
+        str += grid[row][col] + ' ';
+      }
+    }
+  }
+  console.log(str);
+}
+
+let grid = [
+  [1, 2, 3, 4],
+  [5, 6, 7, 8],
+  [9, 10, 11, 12],
+  [13, 14, 15, 16],
+  [17, 18, 19, 20],
+];
+displayWavePrint(grid, 5, 4); */
+
+//! leetcode 867. Transpose Matrix
+
+/* var transpose = function (matrix) {
+  for (let i = 0; i < matrix.length; i++) {
+    for (let j = i; j < matrix[i].length; j++) {
+      let temp = matrix[i][j];
+      matrix[i][j] = matrix[j][i];
+      matrix[j][i] = temp;
+    }
+  }
+  console.log(matrix);
+};
+let matrix = [
+  [1, 2, 3],
+  [4, 5, 6],
+  [7, 8, 9],
+];
+transpose(matrix); */
+
+//? this function will not work in rectangle matrix
+// so we change in our logic and doint by creating other matrix
+
+/* var transpose = function (matrix) {
+  let resultArr = Array(matrix[0].length);
+  for (let i = 0; i < matrix[0].length; i++) {
+    let arr = Array(matrix.length);
+    resultArr[i] = arr;
+  }
+  for (let i = 0; i < matrix.length; i++) {
+    for (let j = 0; j < matrix[i].length; j++) {
+       resultArr[j][i] = matrix[i][j];
+    }
+  }
+  return resultArr;
+}; */
+
+//? Given 2, 2D arrays where the first 2d array has a dimension (m,n) and the second 2d array has a dimension (n, k), multiply both the 2d arrays.
+//* condition - we can only multiply if no. of cols of 1st array is equal to no. of rows of 2nd array
+
+//! Multiply Matrix
+function MultiplyMatrix(a, m, n, b, n, k) {
+  let c = Array(m);
+  for (let i = 0; i < m; i++) {
+    c[i] = Array(k).fill(0);
+  }
+
+  // increase over every cell of c
+  for (let i = 0; i < m; i++) {
+    // go to every row of c
+    for (let j = 0; j < k; j++) {
+      // for each row go to every col of c
+      for (let x = 0; x < n; x++) {
+        c[i][j] += a[i][x] * b[x][j];
+      }
+    }
+  }
+  console.log(c)
+}
+
+const a = [
+  [1, 2],
+  [3, 4],
+  [5, 6],
+]; // 3x2
+
+const b = [
+  [7, 8, 9],
+  [10, 11, 12],
+]; // 2x3
+
+MultiplyMatrix(a, 3, 2, b, 2, 3);
+
+//! leetcode 54. Spiral Matrix
