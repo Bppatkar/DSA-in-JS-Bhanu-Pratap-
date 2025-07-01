@@ -949,7 +949,7 @@ in XOR table - if we xor two same value the ans is zero 0, whereas xor of a valu
 [4,1,2,1,3,2,3] so if we xor that values - 4 ^ 1 ^ 2 ^ 1 ^ 3 ^ 2 ^ 3 --> all same values becomes 0 means we get
  4 ^ 0 --> so in xor table  ," xor of a value with 0, gives the same value" so we got value 4 that is our ans.
 */
-
+/* 
 var singleNumber = function (nums) {
   let result = 0;
   for (let i = 0; i < nums.length; i++) {
@@ -960,4 +960,138 @@ var singleNumber = function (nums) {
 
 // let nums = [2, 2, 1];
 let nums = [4, 1, 2, 1, 2];
-console.log(singleNumber(nums));
+console.log(singleNumber(nums)); */
+
+//* given an array print all subarrays of the givem array. [you can print in any order]
+// it is a contiguous cross-section of your array
+
+/* [1,2 ,3 ,4]
+so output should be - 
+[1]
+[2]
+[3]
+[4]
+[1,2]
+[2,3]
+[1,2,3]
+[2,3,4]
+[1,2,3,4] 
+these all are sub-array of [1,2,3,4]
+*/
+
+/* //? solution
+function printSubArray(arr) {
+  for (let start = 0; start < arr.length; start++) {
+    let str = '';
+    for (let end = start; end < arr.length; end++) {
+      str += arr[end] + ' ';
+      console.log(str);
+    }
+  }
+}
+printSubArray([1, 2, 3, 4]); */
+
+//! leetcode 169. Majority Element
+/* var majorityElement = function (nums) {
+  let currPosibleMajority = -1;
+  let count = 0;
+  for (let i = 0; i < nums.length; i++) {
+    if (count == 0) {
+      currPosibleMajority = nums[i];
+    }
+    if (currPosibleMajority == nums[i]) {
+      count++;
+    } else count--;
+  }
+  return currPosibleMajority;
+};
+console.log(majorityElement([2,2,1,1,1,2,2])) */
+
+//! leetcode 349. Intersection of two arrays
+//? one way of solving question
+/* var interSection = function (nums1, nums2) {
+  let set1 = new Set(nums1);
+  let set2 = new Set(nums2);
+  let resultArr = [];
+  for (let num of set1) {
+    if (set2.has(num)) {
+      resultArr.push(num);
+    }
+  }
+  return resultArr;
+}; */
+
+//? other way to solve the same ans
+/* var interSection = function (nums1, nums2) {
+  let freqNums1 = {};
+  for (let i = 0; i < nums1.length; i++) {
+    let element = nums1[i];
+    if (freqNums1[element]) {
+      freqNums1[element]++;
+    } else {
+      freqNums1[element] = 1;
+    }
+  }
+  let freqNums2 = {};
+  for (let i = 0; i < nums2.length; i++) {
+    let element = nums2[i];
+    if (freqNums1[element]) {
+      freqNums2[element] = 1;
+    }
+  }
+  return Object.keys(freqNums2);
+}; 
+
+let nums1 = [4, 9, 5];
+// let nums1 = [1, 2, 2, 1];
+let nums2 = [9, 4, 9, 8, 4];
+// let nums2 = [2, 2];
+// let nums1 = [2, 9, 1, 2, 2, 3, 9];
+// let nums2 = [2, 1, 1, 7, 6, 8, 3];
+console.log(interSection(nums1, nums2));
+*/
+//? if got error in leetcode submission
+// fix return - Object.keys(freqNums2).map(Number);
+
+//! 2D array
+/* let arr = [
+  [1, 2],
+  [3, 4],
+  [5, 6],
+];
+let arr1 = [[1], [1, 2], [1, 2, 3], [4]]; */
+//Inner array can be of different size
+
+/* //* To create a 2d array of 5X6 {5 rows and 6 columns} and array cell of the 2d array should 0.
+
+let arr = Array(5);
+for (let i = 0; i < 5; i++) {
+  let inner = Array(5).fill(1);
+  arr[i] = inner;
+}
+// console.log(arr);
+
+arr[0][1] = 5;
+console.log(arr);
+ */
+
+//? Print all elements of this 2d grid row by row
+// expected o/p - 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16
+function display(grid) {
+  let str = '';
+  for (let i = 0; i < grid.length; i++) {
+    for (let j = 0; j < grid[i].length; j++) {
+      str += grid[i][j] + ' ';
+    }
+  }
+  console.log(str);
+}
+
+let grid = [
+  [1, 2, 3, 4],
+  [5, 6, 7, 8],
+  [9, 10, 11, 12],
+  [13, 14, 15, 16],
+];
+
+display(grid);
