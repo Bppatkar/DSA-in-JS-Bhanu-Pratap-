@@ -247,14 +247,85 @@ transpose(matrix); */
 3. eleminate last_col
 4. eleminate start_col
 */
-var spiralOrder = function (matrix) {
+/* var spiralOrder = function (matrix) {
+  let m = matrix.length; // no of rows
+  let n = matrix[0].length; // no of cols
   let start_row = 0;
   let start_col = 0;
   let last_row = matrix.length - 1;
   let last_col = matrix[0].length - 1;
+  let count = 0;
 
   let result = []; // in the last we return that result bcz expected output is in array
+
+  while (count < n*m) {
+    //eleminate the starting row
+    for (let i = start_col; i <= last_col; i++) {
+      result.push(matrix[start_row][i]);
+      count++; // because we added a new element
+    }
+    start_row += 1;
+    if (count == n * m) break;
+
+    // eleminate the last col
+    for (let i = start_row; i <= last_row; i++) {
+      result.push(matrix[i][last_col]);
+      count++;
+    }
+    last_col -= 1;
+    if (count == n * m) break;
+
+    // eleminate the last row
+    for (let i = last_col; i >= start_col; i--) {
+      result.push(matrix[last_row][i]);
+      count++;
+    }
+    last_row -= 1;
+    if (count == n * m) break;
+
+    //eleminate the start col
+    for (let i = last_row; i >= start_row; i--) {
+      result.push(matrix[i][start_col]);
+      count++;
+    }
+    start_col += 1;
+    if (count == n * m) break;
+  }
 
   // after all algorithym
   return result;
 };
+ */
+
+//! leetcode 566. Reshape the Matrix
+/* var matrixReshape = function (mat, r, c) {
+  let m = mat.length;
+  let n = mat[0].length;
+
+  // cannot do reshape
+  // [when no of element in original matrix and no. of element in expected matrix is diff]
+  if (n * m !== r * c) return mat;
+
+  let row = 0;
+  let col = 0;
+  let result = Array(r);
+
+  for (let i = 0; i < r; i++) {
+    result[i] = Array(c).fill(0);
+  }
+
+  for (let i = 0; i < m; i++) {
+    for (let j = 0; j < n; j++) {
+      let element = mat[i][j];
+      result[row][col] = element;
+      col++;
+      if (col == c) {
+        row++;
+        col = 0;
+      }
+    }
+  }
+  return result;
+}; */
+
+//! leetcode 1275. Find Winner on a Tic Tac Toe Game
