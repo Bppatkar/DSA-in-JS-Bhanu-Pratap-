@@ -500,11 +500,79 @@ var tictactoe = function (moves) {
     }
   }
   return result;
-}; */
+}; 
 
 let ans = sortedSquares([-4, -1, 0, 3, 10]);
 console.log(ans);
-// sortedSquares([-7, -3, 2, 3, 11]);
+// sortedSquares([-7, -3, 2, 3, 11]); */
 
 //! leetcode 15. 3Sum
-var threeSum = function (nums) {};
+/* var threeSum = function (nums) {
+  const result = [];
+
+  // Sort the array first - this is crucial for the two-pointer approach
+  nums.sort((a, b) => a - b);
+
+  // Fix the first element (c in your terminology)
+  for (let i = 0; i < nums.length - 2; i++) {
+    // Skip duplicates for the first element
+    if (i > 0 && nums[i] === nums[i - 1]) {
+      continue;
+    }
+
+    const target = -nums[i]; // This is -c, what we want a + b to equal
+    let left = i + 1; // Start pointer (a)
+    let right = nums.length - 1; // End pointer (b)
+
+    while (left < right) {
+      const sum = nums[left] + nums[right];
+
+      if (sum === target) {
+        // Found a triplet!
+        result.push([nums[i], nums[left], nums[right]]);
+
+        // Skip duplicates for left pointer
+        while (left < right && nums[left] === nums[left + 1]) {
+          left++;
+        }
+        // Skip duplicates for right pointer
+        while (left < right && nums[right] === nums[right - 1]) {
+          right--;
+        }
+        left++;
+        right--;
+      } else if (sum < target) {
+        // Sum is too small, move left pointer right
+        left++;
+      } else {
+        // Sum is too large, move right pointer left
+        right--;
+      }
+    }
+  }
+
+  return result;
+}; */
+
+//*other way
+/* var threeSum = function (nums) {
+  const result = [];
+  nums.sort((a, b) => a - b);
+  for (let i = 0; i < nums.length - 2; i++) {
+    if (i > 0 && nums[i] === nums[i - 1]) continue;
+    let [left, right] = [i + 1, nums.length - 1];
+    while (left < right) {
+      const sum = nums[i] + nums[left] + nums[right];
+      if (sum === 0) {
+        result.push([nums[i], nums[left++], nums[right--]]);
+        while (left < right && nums[left] === nums[left - 1]) left++;
+        while (left < right && nums[right] === nums[right + 1]) right--;
+      } else if (sum < 0) left++;
+      else right--;
+    }
+  }
+  return result;
+}; */
+const nums = [-1, 0, 1, 2, -1, -4];
+const triplets = threeSum(nums);
+console.log('Output:', triplets);
