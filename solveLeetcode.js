@@ -445,3 +445,66 @@ var tictactoe = function (moves) {
     }
 };
  */
+
+//! leetcode 1. two sum
+/* var twoSum = function (nums, target) {
+  let result = [];
+  for (let i = 0; i < nums.length; i++) {
+    for (let j = i + 1; j < nums.length; j++) {
+      if (nums[i] + nums[j] == target) {
+        result.push(i);
+        result.push(j);
+      }
+    }
+  }
+  return result;
+}; */
+
+//! leetcode 977. Squares of a Sorted array
+//* solving via inbuilt method
+/* var sortedSquares = function (nums) {
+  console.log(nums.map((e) => (e < 0 ? e * -1 : e) ** 2).sort((a, b) => a - b));
+}; */
+
+//* other way [simple for loop]
+/* var sortedSquares = function (nums) {
+  let result = [];
+  for (let i = 0; i < nums.length; i++) {
+    result.push(nums[i] ** 2);
+  }
+  return result.sort((a, b) => a - b);
+}; */
+//* other way [in above method we take extra array]
+/* var sortedSquares = function (nums) {
+  // let result = [];
+  for (let i = 0; i < nums.length; i++) {
+    nums[i] = nums[i] ** 2;
+  }
+  nums.sort((a, b) => a - b);
+  return nums;
+}; */
+//* other way {more optimise}[squaring a number is always return a +ve no.]
+//? using two pointer approach - first or smallest value and last or largest value can decide which is biggest and second biggest value [-7,-3, -2, -1, 0, 1, 2, 3, 5] (-7 is smallest but if we squareup it becomes 49 which is bigger than square of 5)
+/* var sortedSquares = function (nums) {
+  let n = nums.length;
+  let left = 0;
+  let right = nums.length - 1;
+  let result = Array(n);
+  for (let i = n - 1; i >= 0; i--) {
+    if (nums[left] ** 2 < nums[right] ** 2) {
+      result[i] = nums[right] ** 2;
+      right--;
+    } else {
+      result[i] = nums[left] ** 2;
+      left++;
+    }
+  }
+  return result;
+}; */
+
+let ans = sortedSquares([-4, -1, 0, 3, 10]);
+console.log(ans);
+// sortedSquares([-7, -3, 2, 3, 11]);
+
+//! leetcode 15. 3Sum
+var threeSum = function (nums) {};
