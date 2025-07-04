@@ -555,7 +555,8 @@ console.log(ans);
 }; */
 
 //*other way
-/* var threeSum = function (nums) {
+/* 
+var threeSum = function (nums) {
   const result = [];
   nums.sort((a, b) => a - b);
   for (let i = 0; i < nums.length - 2; i++) {
@@ -572,7 +573,10 @@ console.log(ans);
     }
   }
   return result;
-}; */
+}; 
 const nums = [-1, 0, 1, 2, -1, -4];
 const triplets = threeSum(nums);
 console.log('Output:', triplets);
+*/
+
+//! leetcode 532. K-diff Pairs in an Array
