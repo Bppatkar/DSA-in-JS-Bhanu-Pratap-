@@ -580,3 +580,37 @@ console.log('Output:', triplets);
 */
 
 //! leetcode 532. K-diff Pairs in an Array
+
+//* using Two Pointers with Sorting approach because
+//Sorting helps us:
+// 1. Avoid duplicate pairs (since duplicates will be next to each other after sorting).
+// 2. Use two pointers efficiently to find pairs with difference k.
+
+/* var findPairs = function (nums, k) {
+  nums.sort((a, b) => a - b);
+  let result = 0;
+  for (let i = 0; i < nums.length; i++) {
+    // Skip duplicates (avoid counting same pair again)
+    if (i > 0 && nums[i] === nums[i - 1]) continue;
+
+    for (let j = i + 1; j < nums.length; j++) {
+      let diff = nums[j] - nums[i];
+
+      if (diff == k) {
+        // console.log(`Pair found: nums[i] = ${nums[i]}, nums[j] = ${nums[j]}`);
+        result++;
+        break;
+      } else if (diff > k) {
+        break;
+      }
+    }
+  }
+  return result;
+};
+
+let nums = [3, 1, 4, 1, 5],
+  k = 2;
+let ans = findPairs(nums, k);
+console.log(ans);
+ */
+
