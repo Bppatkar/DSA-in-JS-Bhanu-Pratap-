@@ -632,9 +632,15 @@ let height = [1, 8, 6, 2, 5, 4, 8, 3, 7];
 let result = maxArea(height);
 console.log(result); */
 
+//! leetcode 849. Maximize Distance to Closest Person
+
 //*______________________________________________________________________
 /* 
 “You only need 25 questions to learn all the DSA patterns” — The Coding Interview Bootcamp
+
+//! But but but....
+//* Final Thought
+//* The goal isn’t to memorize 25 problems but to learn 25 ways of thinking. Once you internalize these patterns, you can tackle most interview questions efficiently.
 
 Why rush solving 500+ random problems? Save this list of 25 questions that are most frequently asked in tech interviews:
 
