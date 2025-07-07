@@ -633,7 +633,22 @@ let result = maxArea(height);
 console.log(result); */
 
 //! leetcode 849. Maximize Distance to Closest Person
-
+var maxDistToClosest = function (seats) {
+  let max = 0;
+  let prev = -1;
+  for (let i = 0; i < seats.length; i++) {
+    if (seats[i] === 1) {
+      if (prev === -1) max = i;
+      else max = Math.max(max, (i - prev) / 2);
+      prev = i;
+    }
+  }
+  max = Math.max(max, seats.length - 1 - prev);
+  return Math.floor(max);
+};
+let seats = [1, 0, 0, 0, 1, 0, 1];
+let result = maxDistToClosest(seats);
+console.log(result);
 //*______________________________________________________________________
 /* 
 “You only need 25 questions to learn all the DSA patterns” — The Coding Interview Bootcamp
