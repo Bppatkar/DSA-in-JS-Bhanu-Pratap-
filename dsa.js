@@ -39,7 +39,17 @@
 //! 2) we are going to judge algorithym based on their rate of growth that, how fast the time is going to change  , with the very small change in input size
 
 //? based on these two observations/terms - we introduce a new way of analyzing algorithym - called as "Asymptotic Analysis"
-/* 
-Asymptotic Analysis - 1) rate of growth ,2) how algorithym is performing for large input size
+// Asymptotic Analysis - 1) rate of growth ,2) how algorithym is performing for large input size
 
-*/
+// Asymptote -> it is a straight line that constantly opproches a given curve but doesn't meet at any infinite distance
+// https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.geeksforgeeks.org%2Fmaths%2Fasymptote-formula%2F&psig=AOvVaw1bWfdSnigbSU3wzacDotrj&ust=1752051647435000&source=images&cd=vfe&opi=89978449&ved=0CBQQjRxqFwoTCPiPqZXzrI4DFQAAAAAdAAAAABAE
+
+//* these are 2 major criteria for Asymptotic Analysis
+// 1) rate of growth of algo (running time w.r.t. input size)
+// 2) Behaviour of the rate at very large input size
+
+//* whenever u want to represent the rate of growth in terms of the highest degree polynomial of the best case , we use 'Omega' for average case and 'Theta' for worst case 'O' Big 'O'
+
+//!_____________________Big 'O' Notation _____________________
+
+// this notation gives tight upper bound of the given function
