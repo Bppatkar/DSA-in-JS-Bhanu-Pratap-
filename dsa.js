@@ -28,3 +28,18 @@
 //! Time and Space Complexity Analysis
 //* 1) Efficiency of an Algorithym in terms of time taken is important [means how much time it takes to solve the problem]
 //* 2) Efficiency of an Algorithym in terms of space/memory taken is important [means how much space/memory it takes to solve the problem]
+//* 3) Input (What size of input it takes, how input is you giving) directly affects the course of  time and space complexity or algorithym execution , and based on this we are going to decide which algorithym is better or which algorithym is more efficient
+//* 4) always we care , how the algorithym are performing for large input size [means how much time it takes to solve the problem]
+
+//? Term - "Rate of Growth" - means , Rate at which running time increases as a function of input size is called "Rate of Growth"
+// rate of growth simply meaans - at what rate you are changing the running time as a function of input size increases or decreases
+// that is , how fast your rate of change of time is increasing
+
+//! two observation - 1) whenever we are comparing algorithm, we don't care about small input sizes, we care about large input sizes that how my algorithm is performe for large input sizes
+//! 2) we are going to judge algorithym based on their rate of growth that, how fast the time is going to change  , with the very small change in input size
+
+//? based on these two observations/terms - we introduce a new way of analyzing algorithym - called as "Asymptotic Analysis"
+/* 
+Asymptotic Analysis - 1) rate of growth ,2) how algorithym is performing for large input size
+
+*/
