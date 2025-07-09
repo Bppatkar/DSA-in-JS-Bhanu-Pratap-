@@ -117,7 +117,7 @@ console.log(findMaxConsecutiveOnes(nums));
   }
 }; */
 
-//! leetcode 136. Single Number
+//! leetcode - 136. Single Number
 
 //? Approach 1: Freq Map
 /* 
@@ -156,7 +156,7 @@ var singleNumber = function (nums) {
 let nums = [4, 1, 2, 1, 2];
 console.log(singleNumber(nums)); */
 
-//! leetcode 169. Majority Element
+//! leetcode - 169. Majority Element
 /* var majorityElement = function (nums) {
   let currPosibleMajority = -1;
   let count = 0;
@@ -172,7 +172,7 @@ console.log(singleNumber(nums)); */
 };
 console.log(majorityElement([2,2,1,1,1,2,2])) */
 
-//! leetcode 349. Intersection of two arrays
+//! leetcode - 349. Intersection of two arrays
 //? one way of solving question
 /* var interSection = function (nums1, nums2) {
   let set1 = new Set(nums1);
@@ -218,7 +218,7 @@ console.log(interSection(nums1, nums2));
 //? if got error in leetcode submission
 // fix return - Object.keys(freqNums2).map(Number);
 
-//! leetcode 867. Transpose Matrix
+//! leetcode - 867. Transpose Matrix
 
 /* var transpose = function (matrix) {
   for (let i = 0; i < matrix.length; i++) {
@@ -237,7 +237,7 @@ let matrix = [
 ];
 transpose(matrix); */
 
-//! leetcode 54. Spiral Matrix
+//! leetcode - 54. Spiral Matrix
 // expected output - [1,2,3,4,5,6,7,8,9] ==> [1,2,3,6,9,8,7,4,5]
 
 /*
@@ -297,7 +297,7 @@ transpose(matrix); */
 };
  */
 
-//! leetcode 566. Reshape the Matrix
+//! leetcode - 566. Reshape the Matrix
 /* var matrixReshape = function (mat, r, c) {
   let m = mat.length;
   let n = mat[0].length;
@@ -328,7 +328,7 @@ transpose(matrix); */
   return result;
 }; */
 
-//! leetcode 1275. Find Winner on a Tic Tac Toe Game
+//! leetcode - 1275. Find Winner on a Tic Tac Toe Game
 /* let mp = {
   A: 'X',
   B: '0',
@@ -432,7 +432,7 @@ var tictactoe = function (moves) {
   return 'Pending';
 }; */
 
-//! leetcode 344. Reverse String
+//! leetcode - 344. Reverse String
 /* var reverseString = function(s) {
     let i = 0;
     let j = s.length -1;
@@ -446,7 +446,7 @@ var tictactoe = function (moves) {
 };
  */
 
-//! leetcode 1. two sum
+//! leetcode - 1. two sum
 /* var twoSum = function (nums, target) {
   let result = [];
   for (let i = 0; i < nums.length; i++) {
@@ -460,7 +460,7 @@ var tictactoe = function (moves) {
   return result;
 }; */
 
-//! leetcode 977. Squares of a Sorted array
+//! leetcode - 977. Squares of a Sorted array
 //* solving via inbuilt method
 /* var sortedSquares = function (nums) {
   console.log(nums.map((e) => (e < 0 ? e * -1 : e) ** 2).sort((a, b) => a - b));
@@ -506,7 +506,7 @@ let ans = sortedSquares([-4, -1, 0, 3, 10]);
 console.log(ans);
 // sortedSquares([-7, -3, 2, 3, 11]); */
 
-//! leetcode 15. 3Sum
+//! leetcode - 15. 3Sum
 /* var threeSum = function (nums) {
   const result = [];
 
@@ -579,7 +579,7 @@ const triplets = threeSum(nums);
 console.log('Output:', triplets);
 */
 
-//! leetcode 532. K-diff Pairs in an Array
+//! leetcode - 532. K-diff Pairs in an Array
 
 //* using Two Pointers with Sorting approach because
 //Sorting helps us:
@@ -614,7 +614,7 @@ let ans = findPairs(nums, k);
 console.log(ans);
  */
 
-//! leetcode 11. Container with Most Water
+//! leetcode - 11. Container with Most Water
 // simple two pointer approach
 /* var maxArea = function (height) {
   let s = 0,
@@ -632,8 +632,8 @@ let height = [1, 8, 6, 2, 5, 4, 8, 3, 7];
 let result = maxArea(height);
 console.log(result); */
 
-//! leetcode 849. Maximize Distance to Closest Person
-var maxDistToClosest = function (seats) {
+//! leetcode - 849. Maximize Distance to Closest Person
+/* var maxDistToClosest = function (seats) {
   let max = 0;
   let prev = -1;
   for (let i = 0; i < seats.length; i++) {
@@ -648,7 +648,11 @@ var maxDistToClosest = function (seats) {
 };
 let seats = [1, 0, 0, 0, 1, 0, 1];
 let result = maxDistToClosest(seats);
-console.log(result);
+console.log(result); */
+
+//! leetcode 26. remove duplicate from sorted array
+
+
 //*______________________________________________________________________
 /* 
 “You only need 25 questions to learn all the DSA patterns” — The Coding Interview Bootcamp
@@ -700,6 +704,3 @@ Graphs / BFS / DFS / Union-Find
 24. Course Schedule: https://lnkd.in/gMtQhFeM
 25. Redundant Connection: https://lnkd.in/gNYT4EFR
 */
-
-
-
