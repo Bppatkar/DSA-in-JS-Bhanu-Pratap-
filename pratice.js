@@ -992,5 +992,37 @@ const b = [
 
 MultiplyMatrix(a, 3, 2, b, 2, 3); */
 
+//! left rotation by 'K' Element without using extra space
+/* let arr = [1, 2, 3, 4, 5];
+let k = 3; // no. of times to be rotated
 
+leftRotataion(0, k - 1);
+leftRotataion(k, arr.length - 1);
+leftRotataion(0, arr.length - 1);
+console.log(arr);
 
+function leftRotataion(i, j) {
+  while (i < j) {
+    let temp = arr[i];
+    arr[i] = arr[j];
+    arr[j] = temp;
+    i++;
+    j--;
+  }
+} */
+
+//* using nested loops
+/* function leftRotataion(arr, n, k){
+  k = k%n;
+  for (let i = 0; i < k; i++) {
+    let temp = arr[0];
+    for (let j = 0; j < n-1; j++) {
+      arr[j] = arr[j+1];
+    }
+    arr[n-1] = temp;
+  }
+  console.log(arr);
+} */
+
+// let arr = [1, 2, 3, 4, 5];
+// leftRotataion(arr, 5, 3);
