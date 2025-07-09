@@ -664,6 +664,19 @@ console.log(result); */
 let result = removeDuplicates((nums = [0, 0, 1, 1, 1, 2, 2, 3, 3, 4]));
 console.log(result); */
 
+//! leetcode 122. Best Time to Buy and Sell Stock II
+/* var maxProfit = function (prices) {
+  let profit = 0;
+  for (let i = 0; i < prices.length; i++) {
+    if (prices[i] > prices[i - 1]) {
+      profit += prices[i] - prices[i - 1];
+    }
+  }
+  return profit;
+};
+let result = maxProfit((prices = [7, 1, 5, 3, 6, 4]));
+console.log(result); */
+
 //*______________________________________________________________________
 /* 
 “You only need 25 questions to learn all the DSA patterns” — The Coding Interview Bootcamp

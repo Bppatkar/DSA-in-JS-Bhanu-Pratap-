@@ -1028,12 +1028,12 @@ function leftRotataion(i, j) {
 // leftRotataion(arr, 5, 3);
 
 //! merging two sorted array
-/* let arr1 = [2, 7, 8, 5];
+let arr1 = [2, 7, 8, 5];
 let arr2 = [1, 3, 4, 6, 9];
-function mergeSortedArray(arr1, arr2) {
+function mergeSortedArray(arr1, m, arr2, n) {
   arr1 = arr1.sort((a, b) => a - b);
   arr2 = arr2.sort((a, b) => a - b);
-  let newArr = new Array(arr1.length + arr2.length);
+  let newArr = new Array(m + n).fill(0);
   let i = 0,
     j = 0,
     k = 0;
@@ -1053,5 +1053,5 @@ function mergeSortedArray(arr1, arr2) {
   return newArr;
 }
 
-let ans = mergeSortedArray(arr1, arr2);
-console.log(ans); */
+let ans = mergeSortedArray(arr1, arr1.length, arr2, arr2.length);
+console.log(ans);
