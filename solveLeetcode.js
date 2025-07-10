@@ -156,7 +156,7 @@ var singleNumber = function (nums) {
 let nums = [4, 1, 2, 1, 2];
 console.log(singleNumber(nums)); */
 
-//! leetcode - 169. Majority Element
+//! leetcode - 169. Majority Element / moore's voting algorithm
 /* var majorityElement = function (nums) {
   let currPosibleMajority = -1;
   let count = 0;
@@ -169,8 +169,12 @@ console.log(singleNumber(nums)); */
     } else count--;
   }
   return currPosibleMajority;
-};
-console.log(majorityElement([2,2,1,1,1,2,2])) */
+}; */
+
+//*other way to solve the same question
+var majorityElement = function (nums) {};
+
+console.log(majorityElement([2, 2, 1, 1, 1, 2, 2]));
 
 //! leetcode - 349. Intersection of two arrays
 //? one way of solving question
