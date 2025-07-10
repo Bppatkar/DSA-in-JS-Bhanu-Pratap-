@@ -680,14 +680,13 @@ console.log(result); */
 //! leetcode 2418. Sort the people
 /* var sortPeople = function (names, heights) {
   for (let i = 0; i < heights.length - 1; i++) {
-    if (heights[i] < heights[i + 1]) {
-      let tempHeight = heights[i];
-      heights[i] = heights[i + 1];
-      heights[i + 1] = tempHeight;
-
-      let tempName = names[i];
-      names[i] = names[i + 1];
-      names[i + 1] = tempName;
+    for (let j = 0; j < heights.length - 1 - i; j++) {
+      if (heights[j] < heights[j + 1]) {
+        // Swap heights
+        [heights[j], heights[j + 1]] = [heights[j + 1], heights[j]];
+        // Swap names accordingly
+        [names[j], names[j + 1]] = [names[j + 1], names[j]];
+      }
     }
   }
   return names;
@@ -700,8 +699,7 @@ let ans = sortPeople(names, heights);
 console.log(ans); */
 
 //! leetcode 75. Sort colors
-
-var swap = function (arr, i, j) {
+/* var swap = function (arr, i, j) {
   let temp = arr[i];
   arr[i] = arr[j];
   arr[j] = temp;
@@ -725,4 +723,4 @@ var sortColors = function (nums) {
 };
 
 let nums = [2, 0, 2, 1, 1, 0];
-sortColors(nums);
+sortColors(nums); */
