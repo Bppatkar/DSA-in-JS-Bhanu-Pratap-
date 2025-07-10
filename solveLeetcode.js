@@ -728,7 +728,19 @@ sortColors(nums); */
 //! leetcode 53. Maximum Subarray
 //! using Kadane's Algorithm -
 //* Kadane's Algorithm is a dynamic programming algorithm for finding the maximum sum of a subsequence in an array. in simple words it is an algorithm that allows us to find the maximum sum of a subsequence in an array by keeping track of the current maximum sum and the maximum sum seen so far.
-var maxSubArray = function (nums) {};
+/* var maxSubArray = function (nums) {
+  let sum = 0;
+  let max = -Infinity;
+  for (let i = 0; i < nums.length; i++) {
+    sum += nums[i];
+    if (sum > max) {
+      max = sum;
+    }
+    if (sum < 0) sum = 0;
+  }
+  return max;
+};
 let nums = [-2, 1, -3, 4, -1, 2, 1, -5, 4];
+// let nums = [5, 4, -1, 7, 8];
 let result = maxSubArray(nums);
-console.log(result);
+console.log(result); */
