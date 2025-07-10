@@ -677,54 +677,52 @@ console.log(result); */
 let result = maxProfit((prices = [7, 1, 5, 3, 6, 4]));
 console.log(result); */
 
-//*______________________________________________________________________
-/* 
-“You only need 25 questions to learn all the DSA patterns” — The Coding Interview Bootcamp
+//! leetcode 2418. Sort the people
+/* var sortPeople = function (names, heights) {
+  for (let i = 0; i < heights.length - 1; i++) {
+    if (heights[i] < heights[i + 1]) {
+      let tempHeight = heights[i];
+      heights[i] = heights[i + 1];
+      heights[i + 1] = tempHeight;
 
-//! But but but....
-//* Final Thought
-//* The goal isn’t to memorize 25 problems but to learn 25 ways of thinking. Once you internalize these patterns, you can tackle most interview questions efficiently.
+      let tempName = names[i];
+      names[i] = names[i + 1];
+      names[i + 1] = tempName;
+    }
+  }
+  return names;
+};
+// let names = ['Mary', 'John', 'Emma'],
+//   heights = [180, 165, 170];
+let names = ['Alice', 'Bob', 'Bob'],
+  heights = [155, 185, 150];
+let ans = sortPeople(names, heights);
+console.log(ans); */
 
-Why rush solving 500+ random problems? Save this list of 25 questions that are most frequently asked in tech interviews:
+//! leetcode 75. Sort colors
 
-Arrays / Two Pointers / Hashing
-1. 3Sum: https://lnkd.in/gev7gEzS
-2. Container With Most Water: https://lnkd.in/gY2vxRMn
-3. Longest Consecutive Sequence: https://lnkd.in/gMWgaJhS
+var swap = function (arr, i, j) {
+  let temp = arr[i];
+  arr[i] = arr[j];
+  arr[j] = temp;
+  return arr;
+};
+var sortColors = function (nums) {
+  let i = 0,
+    j = 0;
+  let k = nums.length - 1;
+  while (i <= k) {
+    if (nums[i] == 0) {
+      swap(nums, i, j);
+      i++, j++;
+    } else if (nums[i] == 2) {
+      swap(nums, i, k);
+      k--;
+    } else i++;
+  }
 
-Strings
-4. Longest Substring Without Repeating Characters: https://lnkd.in/gCPCfm89
-5. Minimum Window Substring: https://lnkd.in/gHn6tqru
+  console.log(nums);
+};
 
-Dynamic Programming (DP)
-6. Climbing Stairs: https://lnkd.in/gMAZA-aw
-7. House Robber: https://lnkd.in/g2a7USsS
-8. Longest Palindromic Substring: https://lnkd.in/gKW4rFzN
-9. Coin Change: https://lnkd.in/ggfk-rKw
-10. Partition Equal Subset Sum: https://lnkd.in/guvDMreS
-
-Trees / Binary Trees / BST
-11. Binary Tree Level Order Traversal: https://lnkd.in/gfdAa3qW
-12. Diameter of Binary Tree: https://lnkd.in/gJE6Rf3c
-13. Lowest Common Ancestor of a BST: https://lnkd.in/gaPQwZP7
-
-Backtracking
-14. Subsets: https://lnkd.in/gX9kHr7g
-15. Combination Sum: https://lnkd.in/gPa3pd_R
-16. Word Search: https://lnkd.in/gtAvSg9P
-
-Linked List
-17. Reverse Linked List: https://lnkd.in/g-rU_g2i
-18. Linked List Cycle: https://lnkd.in/g4jxKvVb
-19. Merge Two Sorted Lists: https://lnkd.in/gDwNRASd
-
-Stack
-20. Valid Parentheses: https://lnkd.in/gNX7aNsz
-21. Daily Temperatures: https://lnkd.in/gc-GC4iq
-
-Graphs / BFS / DFS / Union-Find
-22. Number of Islands: https://lnkd.in/g7gxPyqP
-23. Clone Graph: https://lnkd.in/gd5-Xrrf
-24. Course Schedule: https://lnkd.in/gMtQhFeM
-25. Redundant Connection: https://lnkd.in/gNYT4EFR
-*/
+let nums = [2, 0, 2, 1, 1, 0];
+sortColors(nums);
