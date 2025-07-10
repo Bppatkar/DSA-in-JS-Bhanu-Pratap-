@@ -724,3 +724,11 @@ var sortColors = function (nums) {
 
 let nums = [2, 0, 2, 1, 1, 0];
 sortColors(nums); */
+
+//! leetcode 53. Maximum Subarray
+//! using Kadane's Algorithm -
+//* Kadane's Algorithm is a dynamic programming algorithm for finding the maximum sum of a subsequence in an array. in simple words it is an algorithm that allows us to find the maximum sum of a subsequence in an array by keeping track of the current maximum sum and the maximum sum seen so far.
+var maxSubArray = function (nums) {};
+let nums = [-2, 1, -3, 4, -1, 2, 1, -5, 4];
+let result = maxSubArray(nums);
+console.log(result);
