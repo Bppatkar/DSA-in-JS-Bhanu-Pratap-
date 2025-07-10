@@ -1056,7 +1056,70 @@ function mergeSortedArray(arr1, m, arr2, n) {
 let ans = mergeSortedArray(arr1, arr1.length, arr2, arr2.length);
 console.log(ans);
  */
+// ____________________String________________________________________________________________-
+//! Print Each Character in new row;
+/* let str = 'Suryavansham';
+for (let i = 0; i < str.length; i++) {
+  console.log(str[i]);
+}
+//* Check Presence of Character
+console.log(str.includes('z'));
+console.log(str.indexOf('k'));
+console.log(str.lastIndexOf('a'));
+ */
 
+//* check string are equal or not
+/* let str = 'vaishali';
+let str1 = 'vaishali';
+console.log(str.localeCompare(str1));
+// -1 (& if strings are equal it return 0)
+ */
 
+//* Replace Substring
+/* const str = "Vishal is Best Frontend Developer. Vishal is Best Developer. ";
+console.log(str.replace("Vishal", "Sujit")); // "Sujit is Best Frontend Developer. Vishal is Best Developer. "
+console.log(str.replaceAll("Vishal", "Sujit")); // "Sujit is Best Frontend Developer. Sujit is Best Developer. " */
 
+//* Substring of a String
+/* const str = 'Vishal is Best Frontend Developer. Vishal is Best Developer. ';
+console.log(str.substring(6, 30));
+console.log(str.slice(-10, -1)); */
 
+//* Split and Join
+/*  const str = 'Vishal is Best Frontend Developer. Vishal is Best Developer. ';
+
+console.log(str.split(''));
+const subString = str.split(' ');
+console.log(subString.join(' ')); */
+
+//* String Start and End
+/* console.log(str.startsWith("Vishal")); // true
+console.log(str.endsWith("Developer")); // true */
+
+//* Trim and Case Conversion
+/* const str = 'Vishal is Best Frontend Developer. Vishal is Best Developer.';
+const trimStr = str.trim();
+const trimStrStart = str.trimStart();
+const trimStrEnd = str.trimEnd();
+console.log(trimStr, trimStr.length);
+console.log(str.toLowerCase());
+console.log(str.toUpperCase());
+ */
+
+/* //* Convert Number and Object to String
+const num = 123;
+console.log(num, num.toString());
+
+const obj = {
+  name: 'Vishal',
+  course: 'DSA with Vishal',
+};
+console.log(obj, JSON.stringify(obj));
+
+//* Concatenate Strings
+let firstName = 'Bhanu';
+const lastName = 'Patkar';
+console.log(firstName + lastName);
+console.log(`${firstName} ${lastName} is a Best Developer`);
+console.log(firstName.concat(lastName, ' is a', ' Best'));
+ */
