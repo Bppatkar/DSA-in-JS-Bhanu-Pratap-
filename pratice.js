@@ -1146,14 +1146,16 @@ if (rev == str) console.log('it is palindrom');
 else console.log('it is not palindrom'); */
 
 //* one more way to check palindrom or not
-let str = 'malayalam';
+/* let str = 'malayalam';
+let isPalindrom = true;
 
 for (let i = 0; i < str.length; i++) {
   if (str[i] != str[str.length - 1 - i]) {
-    console.log('it is not palindrom');
+    isPalindrom = false;
     break;
   }
-  if (i == str.length - 1) {
-    console.log('it is palindrom');
-  }
 }
+
+if (isPalindrom) console.log('It is Palindrom');
+else console.log('It is not Palindrom');
+ */
