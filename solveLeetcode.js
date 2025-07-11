@@ -778,7 +778,7 @@ console.log(result);
  */
 
 //! leetcode 724. Find Pivot Index
-var pivotIndex = function (nums) {
+/* var pivotIndex = function (nums) {
   let left = 0;
   let right = 0;
   let j = nums.length - 1;
@@ -791,10 +791,41 @@ var pivotIndex = function (nums) {
   }
   return -1;
 };
-let nums = [1, 7, 3, 6, 5, 6];
+// let nums = [1, 7, 3, 6, 5, 6];
 // let nums = [1, 2, 3];
-// let nums = [2, 1, -1];
+let nums = [2, 1, -1];
 let result = pivotIndex(nums);
-console.log(result);
+console.log(result); */
+
 //! leetcode 283. Move Zeroes
+/* var moveZeroes = function (nums) {
+  let lastNonZeroFoundAt = 0;
+  
+  for (let i = 0; i < nums.length; i++) {
+    if (nums[i] !== 0) {
+      let temp = nums[lastNonZeroFoundAt];
+      nums[lastNonZeroFoundAt] = nums[i];
+      nums[i] = temp;
+      lastNonZeroFoundAt++;
+    }
+  }
+  
+  return nums;
+};
+
+let nums = [0, 1, 0, 3, 12];
+// let nums = [0];
+//expected O/P ->  [1,3,12,0,0]
+let result = moveZeroes(nums);
+console.log(result); */
+
 //! leetcode 27. Remove Element
+var removeElement = function (nums, val) {
+
+
+  
+};
+let nums = [3, 2, 2, 3],
+  val = 3;
+let result = removeElement(nums, val);
+console.log(result);
