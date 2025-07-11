@@ -1056,13 +1056,10 @@ function mergeSortedArray(arr1, m, arr2, n) {
 let ans = mergeSortedArray(arr1, arr1.length, arr2, arr2.length);
 console.log(ans);
  */
+
 // ____________________String________________________________________________________________-
-//! Print Each Character in new row;
-/* let str = 'Suryavansham';
-for (let i = 0; i < str.length; i++) {
-  console.log(str[i]);
-}
-//* Check Presence of Character
+
+/* //* Check Presence of Character
 console.log(str.includes('z'));
 console.log(str.indexOf('k'));
 console.log(str.lastIndexOf('a'));
@@ -1122,4 +1119,19 @@ const lastName = 'Patkar';
 console.log(firstName + lastName);
 console.log(`${firstName} ${lastName} is a Best Developer`);
 console.log(firstName.concat(lastName, ' is a', ' Best'));
+ */
+
+//! Print Each Character in new row;
+/* let str = 'Suryavansham';
+for (let i = 0; i < str.length; i++) {
+  console.log(str[i]);
+}*/
+
+//! reverse a string
+/* let str = 'bhanu';
+let reversedStr = '';
+for (let i = str.length - 1; i >= 0; i--) {
+  reversedStr += str[i];
+}
+console.log(reversedStr);
  */

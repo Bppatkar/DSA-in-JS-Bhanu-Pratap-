@@ -776,3 +776,7 @@ let height = [4, 2, 0, 3, 2, 5];
 let result = trap(height);
 console.log(result);
  */
+
+//! leetcode 724. Find Pivot Index
+//! leetcode 283. Move Zeroes
+//! leetcode 27. Remove Element
