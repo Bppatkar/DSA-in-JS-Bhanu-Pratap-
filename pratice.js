@@ -1135,3 +1135,25 @@ for (let i = str.length - 1; i >= 0; i--) {
 }
 console.log(reversedStr);
  */
+
+//! string is palindrom or not
+/* let str = 'naman';
+let rev = '';
+for (let i = str.length - 1; i >= 0; i--) {
+  rev += str[i];
+}
+if (rev == str) console.log('it is palindrom');
+else console.log('it is not palindrom'); */
+
+//* one more way to check palindrom or not
+let str = 'malayalam';
+
+for (let i = 0; i < str.length; i++) {
+  if (str[i] != str[str.length - 1 - i]) {
+    console.log('it is not palindrom');
+    break;
+  }
+  if (i == str.length - 1) {
+    console.log('it is palindrom');
+  }
+}
