@@ -1164,15 +1164,40 @@ else console.log('It is not Palindrom');
 // expected output - "AbCdEFgHiJ" --> "aBcDefGhIj"
 // which is in lowercase convert it into uppercase
 
-let str = 'AbCdEFgHiJ';
+/* let str = 'AbCdEFgHiJ';
 console.log(str);
 let toggle = '';
-for (let i = 0; i < str.length  ; i++) {
-  let ch = str.charAt(i);
-  if (str.charCodeAt(i) >= 65 && str.charCodeAt(i) <= 90) {
-    toggle += String.fromCharCode(str.charCodeAt(i) + 32);
-  } else if (str.charCodeAt(i) >= 97 && str.charCodeAt(i) <= 120) {
-    toggle += String.fromCharCode(str.charCodeAt(i) - 32);
+for (let i = 0; i < str.length; i++) {
+  let ch = str.charCodeAt(i);
+  if (ch >= 65 && ch <= 90) {
+    toggle += String.fromCharCode(ch + 32);
+  } else if (ch >= 97 && ch <= 120) {
+    toggle += String.fromCharCode(ch - 32);
   }
 }
-console.log(toggle);
+console.log(toggle); */
+
+//! frequency of each character
+
+//* using mapping
+let str = "Javascript";
+let map = {};
+
+for (let i = 0; i < str.length; i++) {
+  let ch = str[i];
+  if (map[ch]) {
+    map[ch]++;
+  } else {
+    map[ch] = 1;
+  }
+}
+console.log(map);
+
+//* using bitmap
+/* let str1 = "Javascript";
+let bitmap = new Array(256).fill(0);
+for (let i = 0; i < str1.length; i++) {
+  let ch = str1.charCodeAt(i);
+  bitmap[ch]++;
+}
+console.log(bitmap); */
