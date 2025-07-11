@@ -778,5 +778,23 @@ console.log(result);
  */
 
 //! leetcode 724. Find Pivot Index
+var pivotIndex = function (nums) {
+  let left = 0;
+  let right = 0;
+  let j = nums.length - 1;
+  for (let i = 0; i < nums.length; i++) {
+    right += nums[i];
+  }
+  for (let i = 0; i < nums.length; i++) {
+    if (left == right - left - nums[i]) return i;
+    else left += nums[i];
+  }
+  return -1;
+};
+let nums = [1, 7, 3, 6, 5, 6];
+// let nums = [1, 2, 3];
+// let nums = [2, 1, -1];
+let result = pivotIndex(nums);
+console.log(result);
 //! leetcode 283. Move Zeroes
 //! leetcode 27. Remove Element

@@ -1179,7 +1179,7 @@ console.log(toggle); */
 
 //! frequency of each character
 
-//* using mapping
+/* //* using mapping
 let str = "Javascript";
 let map = {};
 
@@ -1191,13 +1191,15 @@ for (let i = 0; i < str.length; i++) {
     map[ch] = 1;
   }
 }
-console.log(map);
+console.log(map); */
 
 //* using bitmap
 /* let str1 = "Javascript";
-let bitmap = new Array(256).fill(0);
+let bitmap = new Array(128).fill(0);
 for (let i = 0; i < str1.length; i++) {
   let ch = str1.charCodeAt(i);
   bitmap[ch]++;
 }
 console.log(bitmap); */
+
+
