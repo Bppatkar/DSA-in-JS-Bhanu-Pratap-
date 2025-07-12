@@ -1137,7 +1137,7 @@ console.log(reversedStr);
  */
 
 //! string is palindrom or not
-//! leetcode 125. valid palindrome
+/* //! leetcode 125. valid palindrome
 var isPalindrom = function (s) {
   s = s.replace(/[^a-zA-Z0-9]/g, '').toLowerCase();
   let rev = '';
@@ -1149,7 +1149,7 @@ var isPalindrom = function (s) {
 };
 let s = 'A man, a plan, a canal: Panama';
 // let s = 'race a car';
-console.log(isPalindrom(s));
+console.log(isPalindrom(s)); */
 
 //* one more way to check palindrom or not
 /* let str = 'malayalam';

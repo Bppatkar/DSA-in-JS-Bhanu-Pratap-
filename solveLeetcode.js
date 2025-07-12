@@ -821,11 +821,30 @@ console.log(result); */
 
 //! leetcode 27. Remove Element
 var removeElement = function (nums, val) {
-
-
-  
+  let j = 0;
+  for (let i = 0; i < nums.length; i++) {
+    if (nums[i] != val) {
+      nums[j] = nums[i];
+      j++;
+    }
+  }
+  return j;
 };
 let nums = [3, 2, 2, 3],
   val = 3;
 let result = removeElement(nums, val);
 console.log(result);
+
+//! leetcode 125. valid palindrome
+/* var isPalindrom = function (s) {
+  s = s.replace(/[^a-zA-Z0-9]/g, '').toLowerCase();
+  let rev = '';
+  for (let i = s.length - 1; i >= 0; i--) {
+    rev += s[i];
+  }
+  if (rev == s) return true;
+  else return false;
+};
+let s = 'A man, a plan, a canal: Panama';
+// let s = 'race a car';
+console.log(isPalindrom(s)); */
