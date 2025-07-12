@@ -1137,13 +1137,19 @@ console.log(reversedStr);
  */
 
 //! string is palindrom or not
-/* let str = 'naman';
-let rev = '';
-for (let i = str.length - 1; i >= 0; i--) {
-  rev += str[i];
-}
-if (rev == str) console.log('it is palindrom');
-else console.log('it is not palindrom'); */
+//! leetcode 125. valid palindrome
+var isPalindrom = function (s) {
+  s = s.replace(/[^a-zA-Z0-9]/g, '').toLowerCase();
+  let rev = '';
+  for (let i = s.length - 1; i >= 0; i--) {
+    rev += s[i];
+  }
+  if (rev == s) return true;
+  else return false;
+};
+let s = 'A man, a plan, a canal: Panama';
+// let s = 'race a car';
+console.log(isPalindrom(s));
 
 //* one more way to check palindrom or not
 /* let str = 'malayalam';
@@ -1201,5 +1207,3 @@ for (let i = 0; i < str1.length; i++) {
   bitmap[ch]++;
 }
 console.log(bitmap); */
-
-
