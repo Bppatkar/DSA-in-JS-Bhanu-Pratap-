@@ -820,7 +820,7 @@ let result = moveZeroes(nums);
 console.log(result); */
 
 //! leetcode 27. Remove Element
-var removeElement = function (nums, val) {
+/* var removeElement = function (nums, val) {
   let j = 0;
   for (let i = 0; i < nums.length; i++) {
     if (nums[i] != val) {
@@ -830,10 +830,12 @@ var removeElement = function (nums, val) {
   }
   return j;
 };
-let nums = [3, 2, 2, 3],
-  val = 3;
+// let nums = [3, 2, 2, 3],
+//   val = 3;
+let nums = [0, 1, 2, 2, 3, 0, 4, 2],
+  val = 2;
 let result = removeElement(nums, val);
-console.log(result);
+console.log(result); */
 
 //! leetcode 125. valid palindrome
 /* var isPalindrom = function (s) {
