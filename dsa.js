@@ -384,3 +384,119 @@ O(n!): ~9.33e+157 ops (more than atoms in universe)
 //* 🔹 Small n → Slow code OK
 //* 🔹 Big n → Need FAST code!
 //* 🔹 Check constraints FIRST!
+
+// ______________________________________________________________
+
+//! 🚀 Instant Time Complexity Trick (Look & Tell in Seconds!)
+//* Want to guess time complexity just by looking at code? Use this cheat sheet for interviews & LeetCode!
+
+//! 🔎 Step 1: Look for Loops & Recursion
+// Count how the code repeats operations based on input size (n).
+
+//*    Code Pattern	              Time Complexity	                    Why?
+
+//*     No loops, just math	        O(1)	                        Runs in fixed time
+//*     Single loop	                O(n)	                        Runs n times
+//*     Two nested loops	          O(n²)	                        n × n operations
+//*     Three nested loops	        O(n³)	                        n × n × n operations
+//*     Loop halves input	          O(log n)	                    Problem size reduces by 2 each step
+//*     Recursion (two calls)	      O(2ⁿ)	                        Each call branches twice
+//*     Recursion (n calls)	        O(n!)	                        Each call branches n times
+
+
+//! ⚡ Step 2: Fast Examples (Look & Answer)
+//*  Example 1 (O(n))
+
+function sumArray(arr) {
+    let sum = 0;
+    for (let num of arr) {  // Single loop → O(n)
+        sum += num;
+    }
+    return sum;
+}
+✅ Answer: O(n) (Loop runs once per element)
+
+//* Example 2 (O(n²))
+
+function printPairs(arr) {
+    for (let i = 0; i < arr.length; i++) {        // Outer loop → O(n)
+        for (let j = 0; j < arr.length; j++) {    // Inner loop → O(n)
+            console.log(arr[i], arr[j]);           // Total → O(n × n) = O(n²)
+        }
+    }
+}
+✅ Answer: O(n²) (Two nested loops)
+
+//* Example 3 (O(log n))
+
+function binarySearch(arr, target) {
+    let left = 0, right = arr.length - 1;
+    while (left <= right) {              // Loop halves input → O(log n)
+        let mid = Math.floor((left + right) / 2);
+        if (arr[mid] === target) return mid;
+        if (arr[mid] < target) left = mid + 1;
+        else right = mid - 1;
+    }
+    return -1;
+}
+✅ Answer: O(log n) (Array splits in half each time)
+
+//* Example 4 (O(2ⁿ))
+
+function fibonacci(n) {
+    if (n <= 1) return n;               
+    return fibonacci(n - 1) + fibonacci(n - 2);  // Two recursive calls → O(2ⁿ)
+}
+✅ Answer: O(2ⁿ) (Each call branches twice)
+
+//* Example 5 (O(n!))
+
+function permute(nums) {
+    if (nums.length <= 1) return [nums];
+    let result = [];
+    for (let i = 0; i < nums.length; i++) {
+        let rest = [...nums.slice(0, i), ...nums.slice(i + 1)];
+        for (let p of permute(rest)) {   // Recursive branching → O(n!)
+            result.push([nums[i], ...p]);
+        }
+    }
+    return result;
+}
+✅ Answer: O(n!) (Generates all permutations → Extremely slow!)
+
+🎯 Step 3: Quick Trick for Interviews
+Count loops:
+
+1 loop → O(n)
+
+2 nested loops → O(n²)
+
+3 nested loops → O(n³)
+
+If input halves → O(log n)
+
+If recursion with 2+ calls → O(2ⁿ) or worse
+
+If generating all combinations → O(n!)
+
+📌 Final Cheat Sheet (For Instant Answers)
+Code Looks Like	Time Complexity
+No loops, direct math	O(1)
+Single loop	O(n)
+Two nested loops	O(n²)
+Three nested loops	O(n³)
+Loop with n = n / 2	O(log n)
+Recursion (two branches)	O(2ⁿ)
+Recursion (n branches)	O(n!)
+💡 Pro Tip for LeetCode
+If n ≤ 100 → O(n³) is OK
+
+If n ≤ 10,000 → O(n²) is OK
+
+If n ≤ 100,000 → Must use O(n) or O(n log n)
+
+If n > 1,000,000 → Only O(log n) or O(1) works
+
+Now you can look at any code and guess complexity in seconds! 🚀
+
+// Practice: Try analyzing random LeetCode problems just by reading the code!
