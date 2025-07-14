@@ -27,50 +27,18 @@ _________________________________
 
 📦 **DSA in JavaScript (AlgoCamp Order)**  
 ├── 🎯 **1. Fundamentals**  
+|── JavaScript
+├── Arrays & Strings  
+
+├── 🔢 **2. Linear Data Structures**  
 │   ├── Big-O Notation  
 │   ├── Time & Space Complexity  
-│   └── Problem-Solving Approaches  
-│  
-├── 🔢 **2. Linear Data Structures**  
-│   ├── Arrays & Strings  
+│   └── Problem-Solving Approaches  │   
 │   │   ├── Two-Pointer Technique  
 │   │   ├── Sliding Window  
 │   │   └── Prefix Sum  
-│   │  
-│   ├── Hash Tables (Objects, Maps, Sets)  
-│   ├── Linked Lists (Singly/Doubly)  
-│   └── Stacks & Queues  
-│  
-├── 🔄 **3. Recursion & Backtracking**  
-│   ├── Base Cases & Call Stack  
-│   └── Recursive Problem Patterns  
-│  
-├── 🌳 **4. Trees**  
-│   ├── Binary Trees  
-│   ├── Binary Search Trees (BST)  
-│   ├── Tree Traversals (DFS, BFS)  
-│   └── Heap / Priority Queue  
-│  
-├── 🌐 **5. Graphs**  
-│   ├── Representations (Adjacency List/Matrix)  
-│   ├── Traversals (DFS, BFS)  
-│   ├── Shortest Path (Dijkstra’s, Bellman-Ford)  
-│   └── Topological Sort  
-│  
-├── 🔍 **6. Searching & Sorting**  
-│   ├── Binary Search  
-│   ├── Merge Sort  
-│   └── Quick Sort  
-│  
-├── 💡 **7. Dynamic Programming**  
-│   ├── Memoization vs. Tabulation  
-│   ├── Fibonacci, Knapsack, LCS  
-│   └── Matrix DP Problems  
-│  
-└── ⚡ **8. Advanced Topics**  
-    ├── Greedy Algorithms  
-    ├── Bit Manipulation  
-    └── Tries (Optional)  
+
+|──── 3. Recursion
 
 
 _________________________________________________________

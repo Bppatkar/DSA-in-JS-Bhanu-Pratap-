@@ -850,3 +850,21 @@ console.log(result); */
 let s = 'A man, a plan, a canal: Panama';
 // let s = 'race a car';
 console.log(isPalindrom(s)); */
+
+//! leetcode 28. Find the Index of the First Occurrence in a String
+var strStr = function (haystack, needle) {
+  let match = true;
+  for (let i = 0; i < haystack.length - needle.length + 1; i++) {
+    let j = 0;
+    while (j < needle.length) {
+      if (haystack[i + j] != needle[j]) break;
+      j++;
+    }
+    if (j == needle.length) return i;
+  }
+  return -1;
+};
+let haystack = 'sadbutsad',
+  needle = 'sad';
+let result = strStr(haystack, needle);
+console.log(result);
