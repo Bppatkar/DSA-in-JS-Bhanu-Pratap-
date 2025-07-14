@@ -785,6 +785,8 @@ function permute(nums) {
 // ______________________________________________________
 
 //! Recursive Code Complexity Analysis
+//* Space complexity of Recursive code will involve the data structures dependent on the value of input that you make inside the function + the call stack that you have made.
+//* so even if u dont create any data structure in function, recursive codes are always going to take up space in memory because call stack will always take up space in memory.
 
 //! 1. Factorial - Linear Recursion O(n)
 javascript;
@@ -905,13 +907,13 @@ function f5(n) {
 // - Example: f5(4) → 13 total calls (grows faster than Fibonacci)
 
 //! Summary of Recursive Complexity Analysis
-//* Function	Pattern	Time Complexity
-//* f0	Linear recursion	O(n)
-//* f1	Dual branching (Fibonacci)	O(2ⁿ)
-//* f2	Recursion + Loop	O(n²)
-//* f3	Recursion + Fixed Loop	O(kn)
-//* f4	Double recursion	O(2ⁿ)
-//* f5	Triple recursion	O(3ⁿ)
+//* Function	          Pattern	Time                    Complexity
+//* f0	                  Linear recursion	              O(n)
+//* f1	                  Dual branching (Fibonacci)	    O(2ⁿ)
+//* f2	                  Recursion + Loop	              O(n²)
+//* f3	                  Recursion + Fixed Loop	        O(kn)
+//* f4	                  Double recursion	              O(2ⁿ)
+//* f5	                  Triple recursion	              O(3ⁿ)
 
 //! Key Techniques:
 
@@ -919,3 +921,19 @@ function f5(n) {
 //? Recursion Tree: Visualize call branches and count nodes
 //? Master Theorem: Applies to divide-and-conquer cases (not shown here)
 //? Memoization: Can optimize exponential cases to O(n) (e.g., Fibonacci)
+
+// ________________________________________________________________
+//! Amortized Analysis
+
+//? Amortized analysis is a technique to analyze algorithms and It provides a more accurate estimate of the total cost of an algorithm in a way that takes into account the cost of memory allocation and deallocation.
+//? Amortized analysis is used to analyze algorithms that use dynamic memory allocation, such as arrays or linked lists.
+
+//* it referes to determining the time-averag running time for a sequence of operations
+
+//! Diffrence Between Asymptotic Complexity Analysis and Amortized Complexity Analysis
+//? it is diffrent from average asymptotic analysis , because here we do not make any assumption about data values whereas in the asymptotic analysis , we assumes an overall average performance.
+
+//* Amortized Analysis is good for those situations where an algorithms performs some good operations and some bad operations, and the bad operations are rare, and the good operations are common.
+//* Amortized Analysis is also good for those situations where the cost of the algorithm is related to the size of the input data.
+
+//! Defination - Amortized analysis is a good way for analysing complexity for those algorithm , which perform very good in most of the cases but extremely bad in some of the cases
