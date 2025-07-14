@@ -572,15 +572,10 @@ function f8(n) {
 // Each step represents dramatically faster growth. For n=100:
 /* 
 O(1): 1 operation
-
 O(log n): ~7 ops
-
 O(n): 100 ops
-
 O(n²): 10,000 ops
-
 O(2ⁿ): ~1.26e+30 ops
-
 O(n!): ~9.33e+157 ops (more than atoms in universe)
  */
 
@@ -787,3 +782,140 @@ function permute(nums) {
 // Now you can look at any code and guess complexity in seconds! 🚀
 
 // Practice: Try analyzing random LeetCode problems just by reading the code!
+// ______________________________________________________
+
+//! Recursive Code Complexity Analysis
+
+//! 1. Factorial - Linear Recursion O(n)
+javascript;
+function f0(n) {
+  if (n == 1) return 1; // Base case: O(1)
+  return n * f0(n - 1); // Recursive call: f0(n-1)
+}
+//* Time Complexity: O(n)
+//
+// How we solve it:
+// 1. Recurrence Relation: T(n) = T(n-1) + O(1)
+// 2. Unfolding the recursion:
+// - T(n) = T(n-1) + 1
+// - T(n-1) = T(n-2) + 1 → T(n) = T(n-2) + 2
+// - ...
+// - T(n) = T(1) + (n-1) = 1 + n - 1 = n
+//? Key Insight:
+// - Single recursive call per step → Linear recursion
+// - Example: f0(5) → 5 → 4 → 3 → 2 → 1 (5 calls total)
+
+//! 2. Fibonacci - Exponential Recursion O(2ⁿ)
+javascript;
+function f1(n) {
+  if (n == 1 || n == 0) return n; // Base case: O(1)
+  return f1(n - 1) + f1(n - 2); // Two recursive calls
+}
+//* Time Complexity: O(2ⁿ)
+//
+// How we solve it:
+// 1. Recurrence Relation: T(n) = T(n-1) + T(n-2) + O(1)
+// 2. Recursion Tree Analysis:
+// - Each call branches into 2 new calls (n-1 and n-2)
+// - Tree depth ≈ n → Total nodes ≈ 2ⁿ
+//? Key Insight:
+// - Exponential growth due to dual branching
+// - Example: f1(5) → 15 total calls (≈2⁵=32 is upper bound)
+// - Optimization: Memoization reduces this to O(n)
+
+//! 3. Linear Recursion + Loop O(n²)
+javascript;
+function f2(n) {
+  if (n == 0) return; // Base case: O(1)
+  for (let i = 1; i <= n; i++) {
+    // Loop: O(n)
+    // some O(1) operation
+  }
+  f2(n - 1); // Recursive call
+}
+//* Time Complexity: O(n²)
+//
+// How we solve it:
+// 1. Recurrence Relation: T(n) = T(n-1) + O(n)
+// 2. Unfolding the recursion:
+// - T(n) = T(n-1) + n
+// - T(n-1) = T(n-2) + (n-1) → T(n) = T(n-2) + n + (n-1)
+// - ...
+// - T(n) = 1 + 2 + ... + n = n(n+1)/2 → O(n²)
+//? Key Insight:
+// - Triangular number pattern (like nested loops)
+// - Example: f2(5) → 5 + 4 + 3 + 2 + 1 = 15 operations
+
+//! 4. Recursion with Fixed-Length Loop O(kn)
+javascript;
+function f3(arr, n) {
+  if (n == 0) return; // Base case: O(1)
+  for (let i = 1; i <= arr.length; i++) {
+    // Loop: O(k)
+    // some O(1) operation
+  }
+  f3(arr, n - 1); // Recursive call
+}
+//* Time Complexity: O(kn) where k = arr.length
+//
+// How we solve it:
+// 1. Recurrence Relation: T(n) = T(n-1) + O(k)
+// 2. Unfolding the recursion:
+// - T(n) = T(n-1) + k
+// - T(n-1) = T(n-2) + k → T(n) = T(n-2) + 2k
+// - ...
+// - T(n) = n * k → O(kn)
+//? Key Insight:
+// - Linear in both n and k (k is constant per recursion level)
+// - Example: k=3, n=5 → 3*5=15 operations
+
+//! 5. Double Recursive Call O(2ⁿ)
+javascript;
+function f4(n) {
+  if (n <= 1) return 1; // Base case: O(1)
+  return f4(n - 1) + f4(n - 1); // Two identical recursive calls
+}
+//* Time Complexity: O(2ⁿ)
+//
+// How we solve it:
+// 1. Recurrence Relation: T(n) = 2T(n-1) + O(1)
+// 2. Recursion Tree Analysis:
+// - Each call branches into 2 new calls
+// - Tree depth = n → Total nodes = 2ⁿ - 1
+//? Key Insight:
+// - Binary tree structure → Exponential growth
+// - Example: f4(3) → 7 total calls (2³ - 1 = 7)
+
+//! 6. Triple Recursive Call O(3ⁿ)
+javascript;
+function f5(n) {
+  if (n <= 1) return 1; // Base case: O(1)
+  return f5(n - 1) + f5(n - 2) + f5(n - 3); // Three recursive calls
+}
+//* Time Complexity: O(3ⁿ)
+//
+// How we solve it:
+// 1. Recurrence Relation: T(n) = T(n-1) + T(n-2) + T(n-3) + O(1)
+// 2. Approximation:
+// - Upper bound: Each call branches into 3 new calls
+// - Lower bound: Ω(φⁿ) where φ ≈ 1.839 (Tribonacci constant)
+// - Conservative Big-O: O(3ⁿ)
+//? Key Insight:
+// - Exponential with larger base than Fibonacci
+// - Example: f5(4) → 13 total calls (grows faster than Fibonacci)
+
+//! Summary of Recursive Complexity Analysis
+//* Function	Pattern	Time Complexity
+//* f0	Linear recursion	O(n)
+//* f1	Dual branching (Fibonacci)	O(2ⁿ)
+//* f2	Recursion + Loop	O(n²)
+//* f3	Recursion + Fixed Loop	O(kn)
+//* f4	Double recursion	O(2ⁿ)
+//* f5	Triple recursion	O(3ⁿ)
+
+//! Key Techniques:
+
+//? Recurrence Relations: Write the equation for T(n)
+//? Recursion Tree: Visualize call branches and count nodes
+//? Master Theorem: Applies to divide-and-conquer cases (not shown here)
+//? Memoization: Can optimize exponential cases to O(n) (e.g., Fibonacci)
