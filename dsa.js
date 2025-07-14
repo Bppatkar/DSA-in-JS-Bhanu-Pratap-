@@ -65,6 +65,292 @@
 // i will write examples for all of them like from f1() to f8()
 
 // _______________________________________________________
+//! Given Function  by Sanket Singh
+
+//! 1. O(n) - Simple Linear Loop
+javascript;
+function f0(n) {
+  let ans = 1;
+  for (let i = 0; i < n; i++) {
+    // *Loop runs exactly n times*
+    console.log(i); // O(1) per iteration
+    ans += i; // O(1) per iteration
+  }
+  return ans; // O(1)
+}
+//* Total Time = n * (O(1) + O(1)) + O(1) = O(n)
+//
+// How we solve it:
+// 1. Identify the loop structure: `for(i=0; i<n; i++)`
+// 2. Loop executes exactly `n` times (i from 0 to n-1)
+// 3. Each iteration has:
+//    - One console.log (O(1))
+//    - One addition (O(1))
+// 4. Constant operations outside loop (O(1))
+//? Key Insight:
+//   - Total operations scale linearly with `n` → O(n)
+//   - Example: n=100 → 100 iterations
+
+//! 2. O(n + m) - Two Independent Loops
+javascript;
+function f1(n, m) {
+  let ans = 0;
+  for (let i = 0; i < n; i++) {
+    // *First loop: O(n)*
+    ans += 1; // O(1)
+  }
+  for (let j = 0; j < m; j++) {
+    // *Second loop: O(m)*
+    ans += 2; // O(1)
+  }
+  console.log(ans); // O(1)
+}
+//* Total Time = O(n) + O(m) = O(n + m)
+//
+// How we solve it:
+// 1. First loop runs `n` times → O(n)
+// 2. Second loop runs `m` times → O(m)
+// 3. These are **independent** (no nesting)
+//? Key Insight:
+//   - We cannot simplify O(n + m) further because:
+//     - `n` and `m` are separate input sizes
+//     - If m ≈ n, it becomes O(2n) → Still O(n)
+//   - Example: n=100, m=50 → 150 total iterations
+
+//! 3. O(log n) - Logarithmic Loop
+javascript;
+function f2(n) {
+  let ans = 9;
+  for (let i = 1; i <= Math.log(n); i++) {
+    // *Loop runs log(n) times*
+    console.log(i); // O(1)
+  }
+  return 0; // O(1)
+}
+//* Total Time = log(n) * O(1) = O(log n)
+//
+// How we solve it:
+// 1. Loop condition: `i <= Math.log(n)`
+//    - Math.log() is natural log (base e)
+//    - In Big-O, log bases don't matter (convertible via constants)
+// 2. Iterations ≈ log₂n (for intuition)
+//? Key Insight:
+//   - Loop count grows logarithmically with input:
+//     - n=100 → ~4.6 iterations
+//     - n=10,000 → ~9.2 iterations
+//   - Example: Binary search uses this pattern
+
+//! 4. O(n²) - Classic Nested Loop
+javascript;
+function f3(n) {
+  let ans = 0;
+  for (let i = 0; i < n; i++) {
+    // *Outer loop: O(n)*
+    for (let j = 0; j < n; j++) {
+      // *Inner loop: O(n)*
+      ans += 1; // O(1)
+    }
+  }
+  return ans; // O(1)
+}
+//* Total Time = O(n) * O(n) = O(n²)
+//
+// How we solve it:
+// 1. Outer loop runs `n` times
+// 2. For **each** outer iteration, inner loop runs `n` times
+//? Key Insight:
+//   - Total iterations = n * n = n²
+//   - Example: n=10 → 100 iterations
+//   - Real-world case: Bubble Sort
+
+//! 5. O(n²) - Triangular Nested Loop
+javascript;
+function f4(n) {
+  let ans = 0;
+  for (let i = 0; i < n; i++) {
+    // *Outer loop: O(n)*
+    for (let j = 0; j < i; j++) {
+      // *Inner loop: O(i)*
+      ans += 1; // O(1)
+    }
+  }
+  return ans; // O(1)
+}
+//* Total Time = Σ(i=0 to n-1) O(i) = O(n²)
+//
+// How we solve it:
+// 1. Outer loop: `n` iterations
+// 2. Inner loop runs `i` times (0, 1, 2, ..., n-1)
+//    - Total iterations = 0 + 1 + 2 + ... + (n-1) = n(n-1)/2
+//? Key Insight:
+//   - Still O(n²) because n²/2 - n/2 → Dominant term is n²
+//   - Example: n=10 → 45 iterations (close to n²=100)
+
+//! 6. O(n log n) - Nested with Log
+javascript;
+function f5(n) {
+  let ans = 0;
+  for (let i = 0; i < n; i++) {
+    // *Outer loop: O(n)*
+    for (let j = 0; j < Math.log(n); j++) {
+      // *Inner loop: O(log n)*
+      ans += 1; // O(1)
+    }
+  }
+  return ans; // O(1)
+}
+//* Total Time = O(n) * O(log n) = O(n log n)
+//
+// How we solve it:
+// 1. Outer loop: `n` iterations
+// 2. Inner loop: `log(n)` iterations per outer loop
+//? Key Insight:
+//   - Common in efficient algorithms like Merge Sort
+//   - Example: n=100 → ~460 ops (100 * 4.6)
+
+//! 7. O(n + n²) → O(n²) - Mixed Complexity
+javascript;
+function f6(n) {
+  let ans = 0;
+  // Part 1: O(n)
+  for (let i = 0; i < n; i++) {
+    // O(n)
+    ans += i; // O(1)
+  }
+  // Part 2: O(n²)
+  for (let i = 0; i < n; i++) {
+    // O(n)
+    for (let j = 0; j < n; j++) {
+      // O(n)
+      ans += i + j; // O(1)
+    }
+  }
+  console.log(ans); // O(1)
+}
+//* Total Time = O(n) + O(n²) → O(n²) (Dominant term)
+//
+// How we solve it:
+// 1. First loop: O(n)
+// 2. Nested loops: O(n²)
+//? Key Insight:
+//   - Big-O keeps only the **dominant term**
+//   - For large `n`, n² dwarfs n
+//   - Example: n=100 → 100 + 10,000 = 10,100 → Still O(n²)
+
+//! 8. O(n²) - Reverse Counting Nested Loop
+javascript;
+function f7(n) {
+  let ans = 0;
+  for (let i = 1; i < n; i++) {
+    // *Outer loop: O(n)*
+    for (let j = n; j > 1; j--) {
+      // *Inner loop: O(n)*
+      ans += i; // O(1)
+    }
+  }
+  return ans; // O(1)
+}
+//* Total Time = O(n) * O(n) = O(n²)
+//
+// How we solve it:
+// 1. Outer loop: `n-1` iterations
+// 2. Inner loop: `n-1` iterations (counts down from n)
+//? Key Insight:
+//   - Direction (counting up/down) doesn't affect complexity
+//   - Same as f3() but with reverse inner loop
+
+//! 9. O(log n) - Exponential Growth Loop
+javascript;
+function f8(n) {
+  let ans = 0;
+  for (let i = 1; i < n; i *= 2) {
+    // *i doubles each iteration*
+    ans += i; // O(1)
+  }
+  return ans; // O(1)
+}
+//* Total Time = O(log n)
+//
+// How we solve it:
+// 1. Loop counter grows exponentially: i=1, 2, 4, 8,...
+// 2. Iterations ≈ log₂n (how many doublings reach n)
+//? Key Insight:
+//   - Example: n=32 → i=1,2,4,8,16 → 5 iterations (log₂32=5)
+
+//! 10. O(n) - Geometric Series Loop (Tricky!)
+javascript;
+function f10(n) {
+  for (let i = n; i > 0; i /= 2) {
+    // *Outer loop: O(log n)*
+    for (j = 0; j < i; j++) {
+      // *Inner loop: O(i)*
+      console.log(i, j); // O(1)
+    }
+  }
+}
+//* Total Time = O(n) (Not O(n log n)!)
+//
+// How we solve it:
+// 1. Outer loop: log n iterations (halving `i`)
+// 2. Inner loop: runs `i` times (n, n/2, n/4,...)
+// 3. Total operations = n + n/2 + n/4 + ... ≈ 2n
+//? Key Insight:
+//   - Forms a geometric series converging to 2n → O(n)
+//   - Counterintuitive but mathematically correct
+
+//! 11. O(n log n) - Harmonic Series Loop
+javascript;
+function f11(n) {
+  for (let j = 1; j <= n; j++) {
+    // *Outer loop: O(n)*
+    for (let i = 0; i < n; i += j) {
+      // *Inner loop: O(n/j)*
+      console.log(i, j); // O(1)
+    }
+  }
+}
+//* Total Time = O(n log n)
+//
+// How we solve it:
+// 1. Outer loop: `n` iterations
+// 2. Inner loop: runs `n/j` times per outer iteration
+// 3. Total operations = n(1 + 1/2 + 1/3 + ... + 1/n) ≈ n log n
+//? Key Insight:
+//   - Harmonic series sum ≈ log n
+//   - Example: n=10 → 10*(1+0.5+0.33+...) ≈ 29 → Close to 10 log 10≈23
+
+//! 12. O(log log n) - Rare Double Log
+javascript;
+function f12(n) {
+  let ans = 0;
+  for (let i = 2; i <= n; i *= i) {
+    // *i squares each iteration*
+    ans++; // O(1)
+  }
+  return ans; // O(1)
+}
+//* Total Time = O(log log n)
+//
+// How we solve it:
+// 1. Loop counter grows super-exponentially: i=2, 4, 16, 256,...
+// 2. Iterations ≈ log₂(log₂n) (how many squarings reach n)
+//? Key Insight:
+//   - Extremely fast convergence
+//   - Example: n=65,536 → i=2,4,16,256 → 4 iterations (log₂(log₂65536)=4)
+
+//! Summary of Key Patterns:
+//* -->Single Loop → O(n)
+//* --> Nested Loops → Multiply complexities (O(n²) or O(n log n))
+//* --> Halving/Doubling → O(log n)
+//* --> Geometric Series → Often O(n) despite nested loops
+//* --> Independent Operations → Add complexities (O(n + m))
+//* --> Dominant Term → Always keep the highest-order term in Big-O
+
+// Each analysis follows the same method:
+//? 1. Identify loop structure → 2. Count iterations → 3. Calculate total operations → 4. Simplify using Big-O rules
+
+// _______________________________________________________
+//! using Function of Myself
 
 //! 1. O(1) - Constant Time
 
