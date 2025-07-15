@@ -937,3 +937,40 @@ function f5(n) {
 //* Amortized Analysis is also good for those situations where the cost of the algorithm is related to the size of the input data.
 
 //! Defination - Amortized analysis is a good way for analysing complexity for those algorithm , which perform very good in most of the cases but extremely bad in some of the cases
+// ________________________________________________________________
+
+//? Arrays are handled algorhmically for demonstrating dynamic nature
+// so my question is
+//! we have access to fixed size arrays and , we have to create dynamic arrays out of it.
+
+//* Ans - like we created an array of size 5 - [0,1,2,3,4]
+// and we do push(16) , it will add 16 at the last but my array does not have enough space to store 16 because it has fixed size 5 .
+// so what we do to add new element .... the worst case is to create new array of size 6 and copy all the elements from the old array to the new array by one by one [0, 1, 2, 3, 4, 16]
+// so, algorithm says everytime increase the size of the array by 1
+
+//? so we can say every push operation at the end of array will take order of 'n' time --> O(n) time
+// it is not very efficient algorithm so we use some other algorithm
+// what we can - instead of increasing the length of array by 1 unit, how about we double it ??
+// ________________________________________________________________
+
+//! Principal of Mathematical Induction [PMI]
+//? 3 rules for PMI
+
+//* 1. Base Case
+//* 2. Asumption
+//* 3. self work
+
+//? 1. Base Case - it is the smallest input value for which we already know the answer
+//? 2. Asumption - let's assume that formulla work correctly for one smaller input value
+//? 3. self work - using the fact that formulla works for n==k, and we will try to prove it will work for n==k+1 also.
+
+// ________________________________________________________________
+//! _______________________Recursion_______________________________
+
+//? Recursion is a technique to solve a problem by breaking it down into smaller sub-problems and solving each sub-problem recursively.
+// every recursion problem take 3 steps to solve
+
+//* 1. Base Case -  it is the smallest possible input value for which we already know the answer
+//* 2. Asumption -  you might assume that some task is going to be done already for you
+//* 3. self work -  based on that task that has been already done for you , you will try to do another task
+
