@@ -853,14 +853,17 @@ console.log(isPalindrom(s)); */
 
 //! leetcode 28. Find the Index of the First Occurrence in a String
 /* var strStr = function (haystack, needle) {
-  if (needle.length === 0) return 0;
+  let nl = needle.length;
+  let hl = haystack.length;
 
-  for (let i = 0; i <= haystack.length - needle.length; i++) {
+  if (nl == 0) return 0;
+
+  for (let i = 0; i < hl - nl; i++) {
     let j = 0;
-    while (j < needle.length && haystack[i + j] === needle[j]) {
+    while (j < nl && haystack[i + j] === needle[j]) {
       j++;
     }
-    if (j === needle.length) return i;
+    if (j === nl) return i;
   }
   return -1;
 };
@@ -870,5 +873,7 @@ let haystack = 'leetcode',
   needle = 'leeto';
 let result = strStr(haystack, needle);
 console.log(result); */
-
-
+//* other way to solve
+/* var strStr = function (haystack, needle) {
+  return haystack.indexOf(needle);
+}; */

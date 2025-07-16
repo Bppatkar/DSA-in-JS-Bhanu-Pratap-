@@ -17,6 +17,7 @@
 59_
 60_Number_Diamond_Pattern_23  
 132_Introduction_to_call_stack_81 ✅
+228_video lesson 24 [77]Section [BS on unsorted array, BS on answer, minimax problems] ✅
 
 
 

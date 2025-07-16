@@ -967,10 +967,29 @@ function f5(n) {
 // ________________________________________________________________
 //! _______________________Recursion_______________________________
 
-//? Recursion is a technique to solve a problem by breaking it down into smaller sub-problems and solving each sub-problem recursively.
+//? Defination - Recursion is a technique using which we solve biggers by calculating answers of smaller sub-problems. we generally denote bigger problem in the form of function and some arguments, and then call the same function with different arguments denoting smaller sub-problems. so we get the ans of smaller sub-problems and and build the answer for bigger problem.
+
 // every recursion problem take 3 steps to solve
 
 //* 1. Base Case -  it is the smallest possible input value for which we already know the answer
 //* 2. Asumption -  you might assume that some task is going to be done already for you
 //* 3. self work -  based on that task that has been already done for you , you will try to do another task
 
+// it is programming + math concept
+
+// example of recursion solving a factorial problem
+
+/* function f(n) {
+  if(n==1) return 1;
+  return n * f(n-1);
+}
+
+console.log(f(5)); */
+
+//! function calling in the memory and how it works
+// learning about behind the scene - callstack, heap memory, other areas,
+// recursion and function mainly related to callstack..... in a journey of dsa we will learn more depth about heap memory and other areas
+// stack is a linear data structure [mental model to store data in diffrent fashion] in which we can add /remove/ get data from the top only.
+
+//* now lets talk about call stack
+//? call stack is nothing but - whenever we call a function, from anywhere in a the code, it adds a new entry in the call stack called as stack frame
