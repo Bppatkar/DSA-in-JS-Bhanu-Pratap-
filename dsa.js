@@ -669,6 +669,15 @@ O(n!): ~9.33e+157 ops (more than atoms in universe)
 
 // ______________________________________________________________
 
+/* 
+//* O(1) = push in array,
+//* O(n)  = addition of entire one D array
+//* O(log n) = binary search of an array
+//* O(n2) = addition of 2D array or matrix
+//* O(n log n) = merge sort because we have to merge N number of splits(divided values ) in to N number of time 
+//? note - if any divide or multiply involved in Input value then log is used ex - binary search
+*/
+
 //! 🚀 Instant Time Complexity Trick (Look & Tell in Seconds!)
 //* Want to guess time complexity just by looking at code? Use this cheat sheet for interviews & LeetCode!
 

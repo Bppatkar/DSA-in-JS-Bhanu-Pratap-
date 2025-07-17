@@ -887,7 +887,7 @@ let s =  ['h', 'e', 'l', 'l', 'o'];
 console.log(reverseString(s)); */
 
 //! leetcode 242. Valid Anagram
-var isAnagram = function (s, t) {
+/* var isAnagram = function (s, t) {
   return s.split('').sort().join('') === t.split('').sort().join('');
 };
 
@@ -897,11 +897,29 @@ let s = 'anagram',
 //   t = 'car';
 
 let ans = isAnagram(s, t);
-console.log(ans);
+console.log(ans); */
 // Time Complexity of this code is - split- O(n), sort- O(n log n), join- O(n) so--> n * log n
 // same for t --> m * log m so Final time complexity: O(n log n)
 
-//! leetcode 344. Longest Common Prefix
+//! leetcode 14. Longest Common Prefix
+/* var longestCommonPrefix = function (strs) {
+  if (strs.length === 0) return '';
+  let newStr = '';
+  for (let i = 0; i < strs[0].length; i++) {
+    let char = strs[0][i];
+    for (let j = 1; j < strs.length; j++) {
+      if (strs[j][i] != char) return newStr;
+    }
+    newStr += char;
+  }
+  return newStr;
+};
+
+// let strs = ['flower', 'flow', 'flight'];
+let strs = ['dog', 'racecar', 'car'];
+let result = longestCommonPrefix(strs);
+console.log(result); */
+
 //! leetcode 344. Merge Strings Alternately
 //! leetcode 344. Length of Last Word
 //! leetcode 344. Valid Palindrome
