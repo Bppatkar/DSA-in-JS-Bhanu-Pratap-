@@ -877,3 +877,35 @@ console.log(result); */
 /* var strStr = function (haystack, needle) {
   return haystack.indexOf(needle);
 }; */
+
+//! leetcode 344. Reverse String
+/* var reverseString = function (s) {
+  return s.reverse();
+};
+
+let s =  ['h', 'e', 'l', 'l', 'o'];
+console.log(reverseString(s)); */
+
+//! leetcode 242. Valid Anagram
+var isAnagram = function (s, t) {
+  return s.split('').sort().join('') === t.split('').sort().join('');
+};
+
+let s = 'anagram',
+  t = 'nagaram';
+// let s = 'rat',
+//   t = 'car';
+
+let ans = isAnagram(s, t);
+console.log(ans);
+// Time Complexity of this code is - split- O(n), sort- O(n log n), join- O(n) so--> n * log n
+// same for t --> m * log m so Final time complexity: O(n log n)
+
+//! leetcode 344. Longest Common Prefix
+//! leetcode 344. Merge Strings Alternately
+//! leetcode 344. Length of Last Word
+//! leetcode 344. Valid Palindrome
+//! leetcode 344. String Compression
+//! leetcode 344. Reverse Words in a String
+//! leetcode 344. Reverse Vowels of a String
+//! leetcode 344. Rotate String
