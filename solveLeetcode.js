@@ -920,10 +920,43 @@ let strs = ['dog', 'racecar', 'car'];
 let result = longestCommonPrefix(strs);
 console.log(result); */
 
-//! leetcode 344. Merge Strings Alternately
-//! leetcode 344. Length of Last Word
-//! leetcode 344. Valid Palindrome
-//! leetcode 344. String Compression
+/* //! leetcode 1768. Merge Strings Alternately
+var mergeAlternately = function (word1, word2) {
+  let str = '';
+  let i = 0,
+    j = 0;
+  while (i < word1.length && j < word2.length) {
+    str += word1[i] + word2[j];
+    i++;
+    j++;
+  }
+  while (i < word1.length) {
+    str += word1[i];
+    i++;
+  }
+  while (j < word2.length) {
+    str += word2[j];
+    j++;
+  }
+  return str;
+};
+
+let word1 = 'abc',
+  word2 = 'pqr';
+console.log(mergeAlternately(word1, word2)); */
+
+/* //! leetcode 344. Length of Last Word
+var lengthOfLastWord = function (s) {
+  s = s.trim();
+  let words = s.split(' ');
+  return words[words.length - 1].length;
+};
+// let s = 'Hello World';
+let s = '   fly me   to   the moon  ';
+console.log(lengthOfLastWord(s)); */
+
+//! leetcode 443. String Compression
+
 //! leetcode 344. Reverse Words in a String
 //! leetcode 344. Reverse Vowels of a String
 //! leetcode 344. Rotate String
