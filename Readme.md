@@ -118,3 +118,8 @@ A comprehensive course covering fundamental data structures and algorithms imple
 
 - **Name**: Bhanu Pratap Patkar
 - **LinkedIn**: https://www.linkedin.com/in/bhanu-pratap-patkar
+
+<img width="1150" height="518" alt="image" src="https://github.com/user-attachments/assets/4f98107c-0c23-4c00-a2b6-e7b542b5aad7" />
+<img width="1276" height="675" alt="image" src="https://github.com/user-attachments/assets/6c23f185-d660-4522-a50b-d535e6ca600e" />
+
+
