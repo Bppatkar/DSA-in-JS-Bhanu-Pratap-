@@ -1025,3 +1025,21 @@ console.log(reverseVowels(s)); //  "AceCreIm"
 // console.log(reverseVowels(s)); //  "leotcede" */
 
 //! leetcode 796. Rotate String
+/* var rotateString = function (s, goal) {
+  if (s.length !== goal.length) {
+    return false;
+  }
+  let newStr = s + s;
+  return newStr.includes(goal) === true;
+};
+// let s = 'abcde',
+//   goal = 'cdeab';
+// console.log(rotateString(s, goal));
+// let s = 'abcde',
+//   goal = 'abced';
+// console.log(rotateString(s, goal));
+let s = 'aa',
+  goal = 'a';
+console.log(rotateString(s, goal)); */
+
+
