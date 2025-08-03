@@ -957,6 +957,25 @@ console.log(lengthOfLastWord(s)); */
 
 //! leetcode 443. String Compression
 
-//! leetcode 344. Reverse Words in a String
-//! leetcode 344. Reverse Vowels of a String
-//! leetcode 344. Rotate String
+/* //! leetcode 151. Reverse Words in a String
+var reverseWords = function (s) {
+  s.trim();
+  let words = s.split(' ');
+  let result = [];
+  for (let i = words.length - 1; i >= 0; i--) {
+    result.push(words[i]);
+  }
+  return result.join(' ').trim().replace(/\s+/g, ' ');
+};
+
+// let s = 'the sky is blue';
+// console.log(reverseWords(s));
+// let s = '  hello world  ';
+// console.log(reverseWords(s));
+let s = 'a good   example';
+console.log(reverseWords(s));
+// reduce multiple spaces between two words to a single space */
+
+//! leetcode 345. Reverse Vowels of a String
+
+//! leetcode 796. Rotate String
