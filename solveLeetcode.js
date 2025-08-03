@@ -886,8 +886,8 @@ console.log(result); */
 let s =  ['h', 'e', 'l', 'l', 'o'];
 console.log(reverseString(s)); */
 
-//! leetcode 242. Valid Anagram
-/* var isAnagram = function (s, t) {
+/* //! leetcode 242. Valid Anagram
+ var isAnagram = function (s, t) {
   return s.split('').sort().join('') === t.split('').sort().join('');
 };
 
@@ -901,8 +901,8 @@ console.log(ans); */
 // Time Complexity of this code is - split- O(n), sort- O(n log n), join- O(n) so--> n * log n
 // same for t --> m * log m so Final time complexity: O(n log n)
 
-//! leetcode 14. Longest Common Prefix
-/* var longestCommonPrefix = function (strs) {
+/* //! leetcode 14. Longest Common Prefix
+var longestCommonPrefix = function (strs) {
   if (strs.length === 0) return '';
   let newStr = '';
   for (let i = 0; i < strs[0].length; i++) {
@@ -955,7 +955,31 @@ var lengthOfLastWord = function (s) {
 let s = '   fly me   to   the moon  ';
 console.log(lengthOfLastWord(s)); */
 
-//! leetcode 443. String Compression
+/* //! leetcode 443. String Compression
+var compress = function (chars) {
+  let indx = 0;
+  for (let i = 0; i < chars.length; i++) {
+    let count = 1;
+    while (i + 1 < chars.length && chars[i] == chars[i + 1]) {
+      i++;
+      count++;
+    }
+    chars[indx++] = chars[i];
+    if (count > 1) {
+      let str = count.toString();
+      for (const digit of str) {
+        chars[indx++] = digit;
+      }
+    }
+  }
+  return indx;
+};
+let chars = ['a', 'a', 'b', 'b', 'c', 'c', 'c'];
+console.log(compress(chars));
+// let chars = ["a"];
+// console.log(compress(chars));
+// let chars = ['a', 'b', 'b', 'b', 'b', 'b', 'b', 'b', 'b', 'b', 'b'];
+// console.log(compress(chars)); */
 
 /* //! leetcode 151. Reverse Words in a String
 var reverseWords = function (s) {
@@ -977,5 +1001,27 @@ console.log(reverseWords(s));
 // reduce multiple spaces between two words to a single space */
 
 //! leetcode 345. Reverse Vowels of a String
+/* var reverseVowels = function (s) {
+  let i = 0,
+    j = s.length - 1,
+    vowels = 'aeiouAEIOU',
+    char = s.split('');
+  while (i < j) {
+    while (i < j && !vowels.includes(char[i])) i++;
+    while (i < j && !vowels.includes(char[j])) j--;
+    // let temp = char[i];
+    // char[i] = char[j];
+    // char[j] = temp;
+    [char[i], char[j]] = [char[j], char[i]];
+    i++;
+    j--;
+  }
+  return char.join('');
+};
+
+let s = 'IceCreAm';
+console.log(reverseVowels(s)); //  "AceCreIm"
+// let s = 'leetcode';
+// console.log(reverseVowels(s)); //  "leotcede" */
 
 //! leetcode 796. Rotate String
