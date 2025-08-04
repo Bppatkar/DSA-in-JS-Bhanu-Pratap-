@@ -945,6 +945,27 @@ let word1 = 'abc',
   word2 = 'pqr';
 console.log(mergeAlternately(word1, word2)); */
 
+//? other way to solve
+/* var mergeAlternately = function (word1, word2) {
+  let n = word1.length,
+    m = word2.length;
+  let i = 0,
+    ans = ' ';
+  while (i < n || i < m) {
+    if(i<n) ans+=word1[i];
+    if(i<m) ans+=word2[i];
+    i++;
+  }
+  return ans;
+};
+
+// let word1 = 'abc',
+//   word2 = 'pqr';
+// console.log(mergeAlternately(word1, word2));
+let word1 = 'ab',
+  word2 = 'pqrs';
+console.log(mergeAlternately(word1, word2)); */
+
 /* //! leetcode 344. Length of Last Word
 var lengthOfLastWord = function (s) {
   s = s.trim();
@@ -1041,5 +1062,3 @@ console.log(reverseVowels(s)); //  "AceCreIm"
 let s = 'aa',
   goal = 'a';
 console.log(rotateString(s, goal)); */
-
-
