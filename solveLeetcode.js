@@ -950,7 +950,7 @@ console.log(mergeAlternately(word1, word2)); */
   let n = word1.length,
     m = word2.length;
   let i = 0,
-    ans = ' ';
+    ans = '';
   while (i < n || i < m) {
     if(i<n) ans+=word1[i];
     if(i<m) ans+=word2[i];
