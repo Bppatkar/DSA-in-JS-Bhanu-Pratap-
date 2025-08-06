@@ -1208,4 +1208,38 @@ for (let i = 0; i < str1.length; i++) {
 }
 console.log(bitmap); */
 
+//! Recursion
+/* function sumOfArr(arr) {
+  if (arr.length == 0) return 0;
+  return arr[arr.length - 1] + sumOfArr(arr.slice(0, arr.length - 1));
+}
+console.log(sumOfArr([1, 2, 3, 4, 5]));
+ */
 
+//* Some Practice Questions of Recursion
+//? Check whether a string is palindrome or not
+/* function palindromeChecker(str) {
+  function helper(s, i) {
+    if (i >= s.length / 2) return true;
+    if (s[i] !== s[s.length - 1 - i]) return false;
+    return helper(s, i + 1);
+  }
+  if (helper(str, 0)) console.log('It is Palindrom');
+  else console.log('It is not Palindrom');
+}
+palindromeChecker('malayalam');
+palindromeChecker('racecar');
+palindromeChecker('A man, a plan, a canal: Panama'); */
+
+//? Create pow(x, n) function which returns x^n
+function pow(x, n) {
+  if (n == 0) return 1;
+  return x * pow(x, n - 1);
+}
+console.log(pow(2, 3));
+
+//? Create a function which returns the sum of digits of a number (e.g., sumOfDigits(453) is 12)
+//? Create a function which returns the number of digits in a number (e.g., countDigits(453) is 3)
+//? Create a function to find the LCM of two numbers
+//? Create a function to find the GCD of two numbers
+//? Create a function to reverse a string
