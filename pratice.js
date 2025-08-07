@@ -1232,14 +1232,56 @@ palindromeChecker('racecar');
 palindromeChecker('A man, a plan, a canal: Panama'); */
 
 //? Create pow(x, n) function which returns x^n
-function pow(x, n) {
+/* function pow(x, n) {
   if (n == 0) return 1;
   return x * pow(x, n - 1);
 }
-console.log(pow(2, 3));
+console.log(pow(2, 3)); */
 
 //? Create a function which returns the sum of digits of a number (e.g., sumOfDigits(453) is 12)
+/* function sumOfDigit(num) {
+  if (num == 0) return 0;
+  return (num % 10) + sumOfDigit(Math.floor(num / 10));
+}
+console.log(sumOfDigit(453)); */
+
+// x/10  means -"X without last digit"
+// Example - 453 / 10 = 45
+// x%10  means -"X last digit"
+// Example - 453 % 10 = 3
+
 //? Create a function which returns the number of digits in a number (e.g., countDigits(453) is 3)
+
+/* function numOfDigits(num) {
+  if (num == 0) return 0;
+  return 1 + numOfDigits(Math.floor(num / 10));
+}
+console.log(numOfDigits(453)); */
+
 //? Create a function to find the LCM of two numbers
+/* function LCM(x, y, curr = 1) {
+  if (curr % x === 0 && curr % y === 0) return curr;
+  return LCM(x, y, curr + 1);
+} */
+
+/* function LCM(x, y) {
+  const GCD = (a, b) => (b === 0) ? a : GCD(b, a % b);
+  return (x * y) / GCD(x, y); 
+  } 
+  console.log(LCM(4, 6)); 
+  */
+
 //? Create a function to find the GCD of two numbers
+
+/* function GCD(x, y) {
+  if (y === 0) return x;
+  return GCD(y, x % y);
+}
+console.log(GCD(6, 7)); */
+
 //? Create a function to reverse a string
+/* function reverse(str) {
+  if (str.length == 0) return '';
+  return str[str.length - 1] + reverse(str.slice(0, str.length - 1));
+}
+console.log(reverse('Vishal')); */
